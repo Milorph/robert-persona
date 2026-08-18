@@ -32,6 +32,32 @@ export default function P3Menu({ onNavigate }) {
     return () => clearTimeout(t);
   }, []);
 
+  // On phones, scale the menu to fit the actual viewport width so no
+  // item can overflow and clip, regardless of device size.
+  useEffect(() => {
+    const menu = document.querySelector(".p3-menu");
+    if (!menu) return;
+    const fit = () => {
+      if (window.innerWidth > 820) {
+        menu.style.removeProperty("--menu-scale");
+        return;
+      }
+      const natural = menu.offsetWidth; // unscaled layout width (incl padding)
+      if (!natural) return;
+      let s = (window.innerWidth * 0.8) / natural;
+      s = Math.max(0.4, Math.min(0.72, s));
+      menu.style.setProperty("--menu-scale", s.toFixed(3));
+    };
+    fit();
+    const t = setTimeout(fit, 300);
+    window.addEventListener("resize", fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    return () => {
+      window.removeEventListener("resize", fit);
+      clearTimeout(t);
+    };
+  }, [mounted]);
+
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "ArrowUp")   activate(Math.max(0, active - 1));
@@ -215,13 +241,18 @@ export default function P3Menu({ onNavigate }) {
         /* ===== MOBILE ===== */
         @media (max-width: 820px) {
           .p3-overlay { align-items: center; justify-content: center; }
-          .p3-menu { transform: scale(0.62); transform-origin: center; gap: 58px; padding: 16px; }
+          .p3-menu {
+            transform: scale(var(--menu-scale, 0.6));
+            transform-origin: center;
+            gap: 58px;
+            padding: 16px;
+          }
           .p3-row { margin: 0 !important; }
           .p3-name-tag { font-size: 46px; top: 10px; left: 14px; }
           .p3-hint { display: none; }
         }
         @media (max-width: 400px) {
-          .p3-menu { transform: scale(0.54); gap: 66px; }
+          .p3-menu { gap: 66px; }
           .p3-name-tag { font-size: 34px; }
         }
       `}</style>

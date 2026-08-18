@@ -183,6 +183,18 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .p3-name-tag span:first-child {
           color: rgba(0, 0, 0, 0.86);
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .p3-overlay { align-items: center; justify-content: center; }
+          .p3-menu { transform: scale(0.74); transform-origin: center; gap: 18px; padding: 24px; }
+          .p3-name-tag { font-size: 46px; top: 10px; left: 14px; }
+          .p3-hint { display: none; }
+        }
+        @media (max-width: 460px) {
+          .p3-menu { transform: scale(0.58); }
+          .p3-name-tag { font-size: 34px; }
+        }
       `}),(0,Z.jsxs)(`div`,{className:`p3-overlay`,children:[(0,Z.jsxs)(`div`,{className:`p3-name-tag`,children:[(0,Z.jsx)(`span`,{children:`Robert's`}),(0,Z.jsx)(`span`,{children:`Persona`})]}),(0,Z.jsx)(`nav`,{className:`p3-menu`,children:Op.map((n,i)=>{let o=t===i,c=Math.abs(i-t),l=o?1:Math.max(.5,1-c*.2),u=n.label.length*n.fontSize*.6+80,d=n.fontSize*.94,f=kp[i]??kp[0];return(0,Z.jsxs)(`a`,{href:`#`,className:`p3-row ${o?`active`:``} ${r?`mounted`:``}`,style:{marginRight:n.offsetX,marginTop:n.offsetY,transitionDelay:r?`${i*80}ms`:`0ms`},onClick:t=>{t.preventDefault(),e?.(n.page)},onMouseMove:()=>{t!==i&&s(i)},"aria-current":o?`page`:void 0,children:[(0,Z.jsx)(`div`,{className:`p3-glow`}),(0,Z.jsxs)(`div`,{className:`p3-skew-wrap`,style:{transform:`skewX(${n.skew}deg) skewY(${n.skewY}deg)`},children:[(0,Z.jsx)(`div`,{className:`p3-shadow-tri${o?` pop`:``}`,style:{width:u,height:d,clipPath:f(u,d)}},o?`pop-${i}-${a}`:`idle-${i}`),(0,Z.jsx)(`div`,{className:`p3-highlight`,style:{width:u,height:d,clipPath:f(u,d),transform:`translateY(-50%) scaleX(${o?1:0})`}}),(0,Z.jsxs)(`div`,{className:`p3-label-wrap`,style:{opacity:l},children:[(0,Z.jsx)(`span`,{className:`p3-label-base p3-label-dark`,style:{fontSize:n.fontSize},children:n.label}),(0,Z.jsx)(`span`,{className:`p3-label-base p3-label-bright`,style:{fontSize:n.fontSize,clipPath:f(u,d)},children:n.label})]})]})]},n.id)})}),(0,Z.jsxs)(`div`,{className:`p3-hint ${r?`mounted`:``}`,children:[(0,Z.jsxs)(`div`,{className:`p3-hint-row`,children:[(0,Z.jsx)(`span`,{className:`p3-hint-key`,children:`↑↓`}),(0,Z.jsx)(`span`,{children:`NAVIGATE`})]}),(0,Z.jsxs)(`div`,{className:`p3-hint-row`,children:[(0,Z.jsx)(`span`,{className:`p3-hint-key`,children:`↵`}),(0,Z.jsx)(`span`,{children:`CONFIRM`})]})]})]})]})}var jp=[{id:`i`,badge:`I`,title:`EDUCATION`,subtitle:`UVic / Seattle University`,rank:4},{id:`ii`,badge:`II`,title:`SKILLS`,subtitle:`ML / Data Science / Full-Stack`,rank:5},{id:`iii`,badge:`III`,title:`PROJECTS`,subtitle:`Featured Work`,rank:5},{id:`iv`,badge:`IV`,title:`EXPERIENCE`,subtitle:`Bombardier / Amazon / Bilimetrix`,rank:4}],Mp=[{index:`01`,title:`EDUCATION LOG`,progress:`2/2`,rows:[{index:`01`,title:`MEng Applied Data Science @ UVic`,status:`GPA 8.32/9`},{index:`02`,title:`BSc Computer Science @ Seattle U`,status:`GPA 3.61/4`},{index:`03`,title:`Led Labs For 200+ Students`,status:`Cleared`},{index:`04`,title:`Python / C++ / MATLAB Teaching`,status:`Cleared`}],bullets:[`- Master of Engineering in Applied Data Science, University of Victoria.`,`- Bachelor of Science in Computer Science, Seattle University, class of 2024.`,`- Teaching Assistant for ECE & CSC courses: coding, debugging, circuit design.`]},{index:`02`,title:`SKILL TREE`,progress:`MAX`,rows:[{index:`01`,title:`ML: PyTorch / HuggingFace / Sklearn`,status:`Main Quest!`},{index:`02`,title:`Data: NumPy / Pandas / LightGBM`,status:`Rank 5`},{index:`03`,title:`Languages: Py / C++ / Java / C# / TS`,status:`Rank 5`},{index:`04`,title:`Backend: Node / ASP.NET / AWS`,status:`Rank 4`}],bullets:[`- Machine learning is the main quest! Aiming for data scientist and SWE roles.`,`- Fine-tuned cross-encoders, built RAG pipelines, shipped clinical ML validation.`,`- Full-stack side quests: React.js, Node.js, MySQL, MongoDB, Docker, CI/CD.`]},{index:`03`,title:`PROJECT ARCHIVE`,progress:`30+`,rows:[{index:`01`,title:`RAG Fact-Verification Pipeline`,status:`89.1% FEVER`},{index:`02`,title:`PM-LSH Neighbor Search`,status:`0.78 Recall`},{index:`03`,title:`Cancer Classifier Neural Net`,status:`97% Acc`},{index:`04`,title:`Facial Attendance Platform`,status:`Shipped`}],bullets:[`- 4-stage RAG pipeline: DeBERTa-v3 + MiniLM cross-encoders on MNLI/ANLI/FEVER.`,`- PM-LSH approximate nearest neighbor search reimplemented from research.`,`- Full archive on GitHub. Hit GITHUB LINK on the main menu!`]},{index:`04`,title:`QUEST HISTORY`,progress:`4`,rows:[{index:`01`,title:`Bombardier: MDO Tools Dev`,status:`Active!`},{index:`02`,title:`UVic: Teaching Assistant`,status:`Cleared`},{index:`03`,title:`Bilimetrix: SWE Intern`,status:`Cleared`},{index:`04`,title:`Amazon: SWE Intern`,status:`Cleared`}],bullets:[`- Now: MDO tooling for next-gen aircraft, Advanced Design @ Bombardier, Canada.`,`- Amazon: self-service tool cutting Alexa onboarding from days to minutes.`,`- Bilimetrix: clinical ML validation pipelines hitting 96% accuracy targets.`]}];function Np({src:e}){let t=pt(),[n,r]=(0,w.useState)(1),[i,a]=(0,w.useState)(!1);return(0,w.useEffect)(()=>{let e=setTimeout(()=>a(!0),80);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{let e=e=>{e.key===`ArrowUp`&&r(e=>Math.max(0,e-1)),e.key===`ArrowDown`&&r(e=>Math.min(jp.length-1,e+1)),e.key===`ArrowLeft`&&t(-1),(e.key===`Escape`||e.key===`Backspace`)&&t(-1)};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[t]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:e,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(`div`,{className:`resume-entry-mask`,"aria-hidden":`true`,children:(0,Z.jsx)(`video`,{className:`resume-entry-video`,src:e,autoPlay:!0,loop:!0,muted:!0,playsInline:!0})}),(0,Z.jsx)(`style`,{children:`
         @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 
@@ -207,7 +219,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         @keyframes resume-entry-reveal {
           from { clip-path: circle(0 at 50% 50%); }
-          to { clip-path: circle(150cqmax at 50% 50%); }
+          to { clip-path: circle(150vmax at 50% 50%); }
         }
 
         .resume-overlay {
@@ -219,9 +231,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .resume-stack {
           position: absolute;
-          top: 9cqh;
-          left: 2.8cqw;
-          width: min(47cqw, 720px);
+          top: 9vh;
+          left: 2.8vw;
+          width: min(47vw, 720px);
           display: flex;
           flex-direction: column;
           gap: 10px;
@@ -388,10 +400,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .resume-detail-panel {
           position: absolute;
-          top: 9.5cqh;
-          right: 4.5cqw;
-          width: min(39cqw, 620px);
-          min-height: 74cqh;
+          top: 9.5vh;
+          right: 4.5vw;
+          width: min(39vw, 620px);
+          min-height: 74vh;
           z-index: 12;
           padding: 22px 24px 24px 24px;
           background: linear-gradient(180deg, rgba(15, 28, 105, 0.96) 0%, rgba(8, 16, 68, 0.97) 100%);
@@ -512,7 +524,39 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           color: #edfaff;
         }
 
-      `}),(0,Z.jsxs)(`div`,{className:`resume-overlay`,children:[(0,Z.jsxs)(`div`,{className:`resume-stack`,children:[(0,Z.jsx)(`div`,{className:`resume-list-tag${i?` mounted`:``}`,children:`LIST`}),jp.map((e,t)=>(0,Z.jsxs)(`div`,{className:`resume-card-wrap${n===t?` active`:``}${i?` mounted`:``}`,style:{transitionDelay:`${t*55}ms`},onMouseMove:()=>{r(t)},onClick:()=>{r(t)},children:[(0,Z.jsx)(`div`,{className:`resume-badge`,children:(0,Z.jsx)(`div`,{className:`resume-badge-text`,children:e.badge})}),(0,Z.jsxs)(`div`,{className:`resume-card`,children:[(0,Z.jsxs)(`div`,{className:`resume-card-inner`,children:[(0,Z.jsx)(`div`,{className:`resume-title`,children:e.title}),(0,Z.jsxs)(`div`,{className:`resume-rank`,children:[(0,Z.jsx)(`div`,{className:`resume-rank-label`,children:`RANK`}),(0,Z.jsx)(`div`,{className:`resume-rank-number`,children:e.rank})]})]}),(0,Z.jsx)(`div`,{className:`resume-subtitle-bar`,children:(0,Z.jsx)(`div`,{className:`resume-subtitle`,children:e.subtitle})})]})]},e.id))]}),(0,Z.jsxs)(`div`,{className:`resume-detail-panel`,children:[(0,Z.jsxs)(`div`,{className:`resume-detail-top`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-top-index`,children:Mp[n].index}),(0,Z.jsx)(`div`,{className:`resume-detail-top-title`,children:Mp[n].title}),(0,Z.jsx)(`div`,{className:`resume-detail-top-progress`,children:Mp[n].progress})]}),(0,Z.jsx)(`div`,{className:`resume-detail-list`,children:Mp[n].rows.map(e=>(0,Z.jsxs)(`div`,{className:`resume-detail-row`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-row-index`,children:e.index}),(0,Z.jsx)(`div`,{className:`resume-detail-row-title`,children:e.title}),(0,Z.jsx)(`div`,{className:`resume-detail-status`,children:e.status})]},e.index))}),(0,Z.jsxs)(`div`,{className:`resume-detail-bottom`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-bottom-title`,children:`DETAILS`}),(0,Z.jsx)(`div`,{className:`resume-detail-bullets`,children:Mp[n].bullets.map(e=>(0,Z.jsx)(`div`,{className:`resume-detail-bullet`,children:e},e))})]})]},n)]})]})}var Pp=[`#0d1a3a`,`#1a6aff`,`#7dd4fc`];function Fp(){return Pp.map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,inset:0,background:e,zIndex:999-t,originX:0,pointerEvents:`none`},initial:{scaleX:0},animate:{scaleX:[0,1,1,0]},transition:{duration:.45,delay:t*.05,times:[0,.4,.6,1],ease:[.76,0,.24,1]}},t))}function Ip(){return[{color:`#00184c`,top:`-12cqh`,left:`-18cqw`,width:`86cqw`,delay:0},{color:`#53edff`,top:`24cqh`,left:`-10cqw`,width:`72cqw`,delay:.05},{color:`#ffffff`,top:`58cqh`,left:`-14cqw`,width:`82cqw`,delay:.1}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:e.top,left:e.left,width:e.width,height:`26cqh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0 100%)`,transform:`rotate(-18deg)`,transformOrigin:`left center`,pointerEvents:`none`},initial:{x:`-60cqw`,opacity:0},animate:{x:[`-60cqw`,`1cqw`,`0cqw`],opacity:[1,1,0]},transition:{duration:.52,delay:e.delay,times:[0,.68,1],ease:[.22,1,.36,1]}},t))}function Lp(){return[{color:`#00184c`,left:`72cqw`,width:`24cqw`,delay:0},{color:`#00dff7`,left:`80cqw`,width:`14cqw`,delay:.06},{color:`#ffffff`,left:`88cqw`,width:`8cqw`,delay:.12}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:`-6cqh`,left:e.left,width:e.width,height:`112cqh`,background:e.color,zIndex:999-t,transform:`skewX(-16deg)`,transformOrigin:`top`,pointerEvents:`none`},initial:{y:`-130cqh`,opacity:1},animate:{y:[`-130cqh`,`0cqh`,`0cqh`,`130cqh`]},transition:{duration:.56,delay:e.delay,times:[0,.42,.58,1],ease:[.76,0,.24,1]}},t))}function Rp({variant:e}){return e===`about`?(0,Z.jsx)(Ip,{}):e===`resume`?(0,Z.jsx)(zp,{}):e===`socials`?(0,Z.jsx)(Lp,{}):(0,Z.jsx)(Fp,{})}function zp(){return[{top:`14cqh`,color:`#0f1760`,delay:0},{top:`31cqh`,color:`#7ff6ff`,delay:.05},{top:`48cqh`,color:`#ffffff`,delay:.1},{top:`65cqh`,color:`#0f1760`,delay:.15}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,left:`-6cqw`,top:e.top,width:`78cqw`,height:`14cqh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 97% 0, 100% 100%, 3% 100%)`,boxShadow:e.color===`#ffffff`?`10px 0 0 #d63232`:`none`,pointerEvents:`none`},initial:{x:`-90cqw`,opacity:1},animate:{x:[`-90cqw`,`2cqw`,`0cqw`,`135cqw`],opacity:[1,1,1,0]},transition:{duration:.6,delay:e.delay,times:[0,.48,.7,1],ease:[.76,0,.24,1]}},t))}function Bp({children:e,variant:t=`default`}){let n=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Sp.div,{style:{position:`relative`},children:[(0,Z.jsx)(Rp,{variant:t}),(0,Z.jsx)(Sp.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.2,delay:.18},children:e})]},n.pathname)})}var Vp=`/robert-persona/assets/char1-CsH_ZuNY.png`,Hp=`/robert-persona/assets/char2-Gce5wDiS.png`,Up=`/robert-persona/assets/char3-DAaUGPoZ.png`,Wp=`/robert-persona/assets/p5red-SIxGFkab.webm`,Gp=`data:image/svg+xml,%3csvg%20fill='%23181717'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGitHub%3c/title%3e%3cpath%20d='M12%20.297c-6.63%200-12%205.373-12%2012%200%205.303%203.438%209.8%208.205%2011.385.6.113.82-.258.82-.577%200-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422%2018.07%203.633%2017.7%203.633%2017.7c-1.087-.744.084-.729.084-.729%201.205.084%201.838%201.236%201.838%201.236%201.07%201.835%202.809%201.305%203.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93%200-1.31.465-2.38%201.235-3.22-.135-.303-.54-1.523.105-3.176%200%200%201.005-.322%203.3%201.23.96-.267%201.98-.399%203-.405%201.02.006%202.04.138%203%20.405%202.28-1.552%203.285-1.23%203.285-1.23.645%201.653.24%202.873.12%203.176.765.84%201.23%201.91%201.23%203.22%200%204.61-2.805%205.625-5.475%205.92.42.36.81%201.096.81%202.22%200%201.606-.015%202.896-.015%203.286%200%20.315.21.69.825.57C20.565%2022.092%2024%2017.592%2024%2012.297c0-6.627-5.373-12-12-12'/%3e%3c/svg%3e`,Kp=`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEu0lEQVR4nO3dTWgUdxzG8cfEJCapmhgDmkZbkoCRxoqi9I1K2oOClHqoIiJ40KDgoUKhePMgUg9FQbRYCm2xpYceSm0PbS4tbcHWixS0Fa0VozHRbWo07y+7m5WVWobN7O5/dmbkP/M8n6OMuyG/7/xndmZcAREREWE0J+w3qNn7Sybs94i78Y82hDanwF9YA49WEIG9kAYfzRB8v4AGH+0Qyvy8sYZvBz9zKKkcDT4+q4HnFUDDt5vX+XgKQMOPBi9zMg5Aw48W03kZBaDhR5PJ3Hx9CpDoKxqA9v5oKza/ggFo+PFQaI46BJDLG4D2/njJN0+tAORcA9DeH09uc9UKQE4BkFMA5GYFoON/vOXOVysAOQVATgGQUwDkFAA5BUBOAZCbC0t0bViKEzvbjLbd+sGf+P7iYOg/EwOtAOQUADkFQE4BkFMA5BQAOQVATgGQm/VvyfVACNd3CGgFIKcAyCkAcgqAnDV3A223vKEKm59vwEttC/BcUy2WLKzEU/PKkZ7JYHgihRv/TuLS7TH8fOUBui8NYnx6BlFgzaeAsG4HH9y8HIe2PFN0u0Nf9+BYd++sP39tZR3e2dSM11fWw9ToZBpfnE/gWPdt9N2fgs2fArQC5PF0fRWO72jFG6sb4FV2ZdjX2YRdryzB4bM9OPlDHzKWfmOyAnDR2V6HM13tWDy/An5UV5Th6LYWrH12Pro+uYrUjH0V6CQwx1vrGvHNgQ7fw3fatr4R729vhY0UgMObaxrw6Z4VmFsW/Lez7+1cipfbFsA2CuA/q5fV4uPd7SgPYfiPHd/Rhjmh/w8N3igAx9JfUxnur2NVcy1eaLFrFdBJYBG/XR/G5+cS+PXvIfQ/mH70uX/Zoips6liEAxub0VRXCa+hnb8+DFsogDwGRpLY/9lf+M7lesO1xASuJfpw5txdnH27Ay+2mu/VGzvq8e6XsIYOAS5u3pvEq+/97jp8p5HJNLac+ONREKZaGqtDP9R4Yc9PYonpVAZbT11G76DZFbzRqTSOfHvT+PWz55jZi0y2UAA5Tv/Yh8v9Y/DiqwsDSAxPG2+fvY9gCwXgkL1c++FP/Sjl713oGTXefmG1PadeCsDhyp1x3LpX2s2bGwPm5wE1VeWwhQJwuNhrvhfn+mckabxtRbk9V4MUgEP2nn6phsZTxtuGcam5VArA4e6Q+YlcrrGptPG2Nl0OVgAO98fM92K3j49RpAByLuyUKplWAJE3kSz9Ob4ZWx/5KUIrgEMyFY0HOYOkABwsfGIrdArAIQO+AhQAOQVATgGQUwDkFAA5BUBOAZBTAOQUADkFQE4BkFMA5BQAOQVATgGQUwDkFAA5BUDOmi+KlCdHXxcv/9MhgJwCIKcAyCkAcgqAnAIgpwDIKQByCoCcAiCnAMgpAHIKgJwCIKcAyJUVelhA4id3vloByCkAcgqAnGsAOg+IJ7e5agUglzcArQLxkm+eWgHIFQxAq0A8FJpj0RVAEURbsfnpEEDOKACtAtFkMjfjFUARRIvpvDwdAhRBNHiZk+dzAEVgN6/z8XXrV98lYI9Sd0xfnwK0GtjBzxwCe/hDq8GTF8QOGPjTPwohfEGuvKE//qUg/NOhVkREELyHTIJU+wzrswwAAAAASUVORK5CYII=`,qp=`data:image/svg+xml,%3csvg%20fill='%23EA4335'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGmail%3c/title%3e%3cpath%20d='M24%205.457v13.909c0%20.904-.732%201.636-1.636%201.636h-3.819V11.73L12%2016.64l-6.545-4.91v9.273H1.636A1.636%201.636%200%200%201%200%2019.366V5.457c0-2.023%202.309-3.178%203.927-1.964L5.455%204.64%2012%209.548l6.545-4.91%201.528-1.145C21.69%202.28%2024%203.434%2024%205.457z'/%3e%3c/svg%3e`,Jp=[Vp,Hp,Up],Yp=[[`NLI`,`PY`],[`PM-LSH`,`PY`],[`neural-network-breast-cancer`,`PY`],[`Network-File-System`,`C++`],[`Facial-Attendance-Platform`,`PY`],[`Rocket-Bookmark-Tool`,`RS`],[`Cartify`,`JS`],[`RDT-Protocol`,`PY`],[`DV-Router`,`PY`],[`Ocean-data-pipeline`,`PY`],[`fair_share`,`TS`],[`fair-share-azure`,`HTML`],[`vendor-network`,`HCL`],[`vendor-data`,`TS`],[`vendor-twitter`,`GIT`],[`E-Commerce-Web-Application`,`PHP`],[`FlutterWorkout`,`DART`],[`FightClass`,`C#`],[`Fighter-Hierarchy`,`C#`],[`Aerial-Ascent`,`C`],[`OOP-NOVA`,`C++`],[`MyShell`,`C++`],[`Covid-19-Data`,`C++`],[`Road-Synchronization`,`C++`],[`Sudoku-Solver`,`JAVA`],[`Trivia-Game`,`C++`],[`HTML-Manager`,`JAVA`],[`Treasure-Hunt`,`C++`],[`neetcode-submissions`,`PY`],[`fall25-csc-bioinf`,`NB`],[`personal-web`,`JS`],[`csc503`,`PY`],[`597proj`,`PY`],[`502_proj`,`PY`],[`final_proj`,`PY`],[`Milorph`,`GIT`]],Xp=[{text:`CODE!`,color:`#e8c100`,bg:`rgba(232,193,0,0.12)`,border:`rgba(232,193,0,0.5)`},{text:`WORK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`},{text:`TALK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`}],Zp=[{id:`github`,label:`GITHUB`,handle:`@Milorph`,href:`https://github.com/Milorph`,icon:`⌨`,barIcon:Gp,newBars:[0,1],counts:Yp.map(([,e])=>e),links:Yp.map(([e])=>`github.com/Milorph/${e}`),stats:[{tag:`REP`,value:`36`,color:`#6ee8ff`},{tag:`LNG`,value:`10+`,color:`#b3f0ff`}]},{id:`linkedin`,label:`LINKEDIN`,handle:`in/robert-widjaja`,href:`https://www.linkedin.com/in/robert-widjaja/`,icon:`💼`,barIcon:Kp,newBars:[0],counts:[`CA`],links:[`linkedin.com/in/robert-widjaja`],stats:[{tag:`ROLE`,value:`SWE`,color:`#4a8fff`},{tag:`LOC`,value:`CA`,color:`#8ab8ff`}]},{id:`email`,label:`EMAIL`,handle:`robertwinstonwidjaja1@gmail.com`,href:`mailto:robertwinstonwidjaja1@gmail.com`,icon:`✉`,barIcon:qp,newBars:[0],counts:[`24H`],links:[`mail.google.com/mail/?view=cm&fs=1&to=robertwinstonwidjaja1@gmail.com`],stats:[{tag:`INB`,value:`OPEN`,color:`#34d399`},{tag:`RES`,value:`24H`,color:`#a7f3d0`}]}],Qp=5;function $p(){let[e,t]=(0,w.useState)(0),[n,r]=(0,w.useState)(!1),[i,a]=(0,w.useState)(0),[o,s]=(0,w.useState)(0),[c,l]=(0,w.useState)(`left`),u=pt(),d=Math.max(1,Math.ceil(Zp[e].links.length/Qp)),f=Zp[e].links.slice(o*Qp,(o+1)*Qp),p=Zp[e].counts.slice(o*Qp,(o+1)*Qp);(0,w.useEffect)(()=>{let e=setTimeout(()=>r(!0),60);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{s(0),a(0)},[e]);let m=()=>{s(e=>(e-1+d)%d),a(0)},h=()=>{s(e=>(e+1)%d),a(0)};return(0,w.useEffect)(()=>{let n=n=>{if(n.key===`q`||n.key===`Q`){d>1&&m();return}if(n.key===`e`||n.key===`E`){d>1&&h();return}if(c===`left`)n.key===`ArrowUp`&&t(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&t(e=>Math.min(Zp.length-1,e+1)),n.key===`ArrowRight`&&(l(`right`),a(0)),n.key===`Enter`&&window.open(Zp[e].href,`_blank`);else{let e=f.length;n.key===`ArrowUp`&&a(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&a(t=>Math.min(e-1,t+1)),n.key===`ArrowLeft`&&l(`left`),n.key===`Enter`&&window.open(`https://`+f[i],`_blank`)}(n.key===`ArrowLeft`&&c===`left`||n.key===`Escape`||n.key===`Backspace`)&&u(-1)};return window.addEventListener(`keydown`,n),()=>window.removeEventListener(`keydown`,n)},[e,u,c,o,d,f,i]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Wp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(`style`,{children:`
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .resume-entry-mask { display: none; }
+          .resume-overlay { position: relative; z-index: 20; height: auto; }
+          .resume-stack {
+            position: static;
+            width: 100%;
+            transform: none;
+            padding: 12vh 14px 8px;
+          }
+          .resume-list-tag { font-size: 50px; margin: 0 0 6px 6px; }
+          .resume-card { height: 88px; }
+          .resume-title { font-size: 32px; }
+          .resume-rank-number { font-size: 46px; }
+          .resume-rank-label { font-size: 20px; }
+          .resume-subtitle-bar { height: 30px; left: 58px; }
+          .resume-subtitle { font-size: 19px; }
+          .resume-detail-panel {
+            position: static;
+            width: auto;
+            min-height: 0;
+            margin: 6px 14px 44px;
+          }
+          .resume-detail-top { min-height: 76px; }
+          .resume-detail-top-index { font-size: 34px; }
+          .resume-detail-top-title { font-size: 28px; }
+          .resume-detail-top-progress { font-size: 32px; }
+          .resume-detail-row-title { font-size: 18px; }
+          .resume-detail-status { font-size: 18px; }
+          .resume-detail-bottom-title { font-size: 26px; }
+          .resume-detail-bullet { font-size: 18px; }
+        }
+      `}),(0,Z.jsxs)(`div`,{className:`resume-overlay`,children:[(0,Z.jsxs)(`div`,{className:`resume-stack`,children:[(0,Z.jsx)(`div`,{className:`resume-list-tag${i?` mounted`:``}`,children:`LIST`}),jp.map((e,t)=>(0,Z.jsxs)(`div`,{className:`resume-card-wrap${n===t?` active`:``}${i?` mounted`:``}`,style:{transitionDelay:`${t*55}ms`},onMouseMove:()=>{r(t)},onClick:()=>{r(t)},children:[(0,Z.jsx)(`div`,{className:`resume-badge`,children:(0,Z.jsx)(`div`,{className:`resume-badge-text`,children:e.badge})}),(0,Z.jsxs)(`div`,{className:`resume-card`,children:[(0,Z.jsxs)(`div`,{className:`resume-card-inner`,children:[(0,Z.jsx)(`div`,{className:`resume-title`,children:e.title}),(0,Z.jsxs)(`div`,{className:`resume-rank`,children:[(0,Z.jsx)(`div`,{className:`resume-rank-label`,children:`RANK`}),(0,Z.jsx)(`div`,{className:`resume-rank-number`,children:e.rank})]})]}),(0,Z.jsx)(`div`,{className:`resume-subtitle-bar`,children:(0,Z.jsx)(`div`,{className:`resume-subtitle`,children:e.subtitle})})]})]},e.id))]}),(0,Z.jsxs)(`div`,{className:`resume-detail-panel`,children:[(0,Z.jsxs)(`div`,{className:`resume-detail-top`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-top-index`,children:Mp[n].index}),(0,Z.jsx)(`div`,{className:`resume-detail-top-title`,children:Mp[n].title}),(0,Z.jsx)(`div`,{className:`resume-detail-top-progress`,children:Mp[n].progress})]}),(0,Z.jsx)(`div`,{className:`resume-detail-list`,children:Mp[n].rows.map(e=>(0,Z.jsxs)(`div`,{className:`resume-detail-row`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-row-index`,children:e.index}),(0,Z.jsx)(`div`,{className:`resume-detail-row-title`,children:e.title}),(0,Z.jsx)(`div`,{className:`resume-detail-status`,children:e.status})]},e.index))}),(0,Z.jsxs)(`div`,{className:`resume-detail-bottom`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-bottom-title`,children:`DETAILS`}),(0,Z.jsx)(`div`,{className:`resume-detail-bullets`,children:Mp[n].bullets.map(e=>(0,Z.jsx)(`div`,{className:`resume-detail-bullet`,children:e},e))})]})]},n)]})]})}var Pp=[`#0d1a3a`,`#1a6aff`,`#7dd4fc`];function Fp(){return Pp.map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,inset:0,background:e,zIndex:999-t,originX:0,pointerEvents:`none`},initial:{scaleX:0},animate:{scaleX:[0,1,1,0]},transition:{duration:.45,delay:t*.05,times:[0,.4,.6,1],ease:[.76,0,.24,1]}},t))}function Ip(){return[{color:`#00184c`,top:`-12vh`,left:`-18vw`,width:`86vw`,delay:0},{color:`#53edff`,top:`24vh`,left:`-10vw`,width:`72vw`,delay:.05},{color:`#ffffff`,top:`58vh`,left:`-14vw`,width:`82vw`,delay:.1}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:e.top,left:e.left,width:e.width,height:`26vh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0 100%)`,transform:`rotate(-18deg)`,transformOrigin:`left center`,pointerEvents:`none`},initial:{x:`-60vw`,opacity:0},animate:{x:[`-60vw`,`1vw`,`0vw`],opacity:[1,1,0]},transition:{duration:.52,delay:e.delay,times:[0,.68,1],ease:[.22,1,.36,1]}},t))}function Lp(){return[{color:`#00184c`,left:`72vw`,width:`24vw`,delay:0},{color:`#00dff7`,left:`80vw`,width:`14vw`,delay:.06},{color:`#ffffff`,left:`88vw`,width:`8vw`,delay:.12}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:`-6vh`,left:e.left,width:e.width,height:`112vh`,background:e.color,zIndex:999-t,transform:`skewX(-16deg)`,transformOrigin:`top`,pointerEvents:`none`},initial:{y:`-130vh`,opacity:1},animate:{y:[`-130vh`,`0vh`,`0vh`,`130vh`]},transition:{duration:.56,delay:e.delay,times:[0,.42,.58,1],ease:[.76,0,.24,1]}},t))}function Rp({variant:e}){return e===`about`?(0,Z.jsx)(Ip,{}):e===`resume`?(0,Z.jsx)(zp,{}):e===`socials`?(0,Z.jsx)(Lp,{}):(0,Z.jsx)(Fp,{})}function zp(){return[{top:`14vh`,color:`#0f1760`,delay:0},{top:`31vh`,color:`#7ff6ff`,delay:.05},{top:`48vh`,color:`#ffffff`,delay:.1},{top:`65vh`,color:`#0f1760`,delay:.15}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,left:`-6vw`,top:e.top,width:`78vw`,height:`14vh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 97% 0, 100% 100%, 3% 100%)`,boxShadow:e.color===`#ffffff`?`10px 0 0 #d63232`:`none`,pointerEvents:`none`},initial:{x:`-90vw`,opacity:1},animate:{x:[`-90vw`,`2vw`,`0vw`,`135vw`],opacity:[1,1,1,0]},transition:{duration:.6,delay:e.delay,times:[0,.48,.7,1],ease:[.76,0,.24,1]}},t))}function Bp({children:e,variant:t=`default`}){let n=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Sp.div,{style:{position:`relative`},children:[(0,Z.jsx)(Rp,{variant:t}),(0,Z.jsx)(Sp.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.2,delay:.18},children:e})]},n.pathname)})}var Vp=`/robert-persona/assets/char1-CsH_ZuNY.png`,Hp=`/robert-persona/assets/char2-Gce5wDiS.png`,Up=`/robert-persona/assets/char3-DAaUGPoZ.png`,Wp=`/robert-persona/assets/p5red-SIxGFkab.webm`,Gp=`data:image/svg+xml,%3csvg%20fill='%23181717'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGitHub%3c/title%3e%3cpath%20d='M12%20.297c-6.63%200-12%205.373-12%2012%200%205.303%203.438%209.8%208.205%2011.385.6.113.82-.258.82-.577%200-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422%2018.07%203.633%2017.7%203.633%2017.7c-1.087-.744.084-.729.084-.729%201.205.084%201.838%201.236%201.838%201.236%201.07%201.835%202.809%201.305%203.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93%200-1.31.465-2.38%201.235-3.22-.135-.303-.54-1.523.105-3.176%200%200%201.005-.322%203.3%201.23.96-.267%201.98-.399%203-.405%201.02.006%202.04.138%203%20.405%202.28-1.552%203.285-1.23%203.285-1.23.645%201.653.24%202.873.12%203.176.765.84%201.23%201.91%201.23%203.22%200%204.61-2.805%205.625-5.475%205.92.42.36.81%201.096.81%202.22%200%201.606-.015%202.896-.015%203.286%200%20.315.21.69.825.57C20.565%2022.092%2024%2017.592%2024%2012.297c0-6.627-5.373-12-12-12'/%3e%3c/svg%3e`,Kp=`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEu0lEQVR4nO3dTWgUdxzG8cfEJCapmhgDmkZbkoCRxoqi9I1K2oOClHqoIiJ40KDgoUKhePMgUg9FQbRYCm2xpYceSm0PbS4tbcHWixS0Fa0VozHRbWo07y+7m5WVWobN7O5/dmbkP/M8n6OMuyG/7/xndmZcAREREWE0J+w3qNn7Sybs94i78Y82hDanwF9YA49WEIG9kAYfzRB8v4AGH+0Qyvy8sYZvBz9zKKkcDT4+q4HnFUDDt5vX+XgKQMOPBi9zMg5Aw48W03kZBaDhR5PJ3Hx9CpDoKxqA9v5oKza/ggFo+PFQaI46BJDLG4D2/njJN0+tAORcA9DeH09uc9UKQE4BkFMA5GYFoON/vOXOVysAOQVATgGQUwDkFAA5BUBOAZCbC0t0bViKEzvbjLbd+sGf+P7iYOg/EwOtAOQUADkFQE4BkFMA5BQAOQVATgGQm/VvyfVACNd3CGgFIKcAyCkAcgqAnDV3A223vKEKm59vwEttC/BcUy2WLKzEU/PKkZ7JYHgihRv/TuLS7TH8fOUBui8NYnx6BlFgzaeAsG4HH9y8HIe2PFN0u0Nf9+BYd++sP39tZR3e2dSM11fWw9ToZBpfnE/gWPdt9N2fgs2fArQC5PF0fRWO72jFG6sb4FV2ZdjX2YRdryzB4bM9OPlDHzKWfmOyAnDR2V6HM13tWDy/An5UV5Th6LYWrH12Pro+uYrUjH0V6CQwx1vrGvHNgQ7fw3fatr4R729vhY0UgMObaxrw6Z4VmFsW/Lez7+1cipfbFsA2CuA/q5fV4uPd7SgPYfiPHd/Rhjmh/w8N3igAx9JfUxnur2NVcy1eaLFrFdBJYBG/XR/G5+cS+PXvIfQ/mH70uX/Zoips6liEAxub0VRXCa+hnb8+DFsogDwGRpLY/9lf+M7lesO1xASuJfpw5txdnH27Ay+2mu/VGzvq8e6XsIYOAS5u3pvEq+/97jp8p5HJNLac+ONREKZaGqtDP9R4Yc9PYonpVAZbT11G76DZFbzRqTSOfHvT+PWz55jZi0y2UAA5Tv/Yh8v9Y/DiqwsDSAxPG2+fvY9gCwXgkL1c++FP/Sjl713oGTXefmG1PadeCsDhyp1x3LpX2s2bGwPm5wE1VeWwhQJwuNhrvhfn+mckabxtRbk9V4MUgEP2nn6phsZTxtuGcam5VArA4e6Q+YlcrrGptPG2Nl0OVgAO98fM92K3j49RpAByLuyUKplWAJE3kSz9Ob4ZWx/5KUIrgEMyFY0HOYOkABwsfGIrdArAIQO+AhQAOQVATgGQUwDkFAA5BUBOAZBTAOQUADkFQE4BkFMA5BQAOQVATgGQUwDkFAA5BUDOmi+KlCdHXxcv/9MhgJwCIKcAyCkAcgqAnAIgpwDIKQByCoCcAiCnAMgpAHIKgJwCIKcAyJUVelhA4id3vloByCkAcgqAnGsAOg+IJ7e5agUglzcArQLxkm+eWgHIFQxAq0A8FJpj0RVAEURbsfnpEEDOKACtAtFkMjfjFUARRIvpvDwdAhRBNHiZk+dzAEVgN6/z8XXrV98lYI9Sd0xfnwK0GtjBzxwCe/hDq8GTF8QOGPjTPwohfEGuvKE//qUg/NOhVkREELyHTIJU+wzrswwAAAAASUVORK5CYII=`,qp=`data:image/svg+xml,%3csvg%20fill='%23EA4335'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGmail%3c/title%3e%3cpath%20d='M24%205.457v13.909c0%20.904-.732%201.636-1.636%201.636h-3.819V11.73L12%2016.64l-6.545-4.91v9.273H1.636A1.636%201.636%200%200%201%200%2019.366V5.457c0-2.023%202.309-3.178%203.927-1.964L5.455%204.64%2012%209.548l6.545-4.91%201.528-1.145C21.69%202.28%2024%203.434%2024%205.457z'/%3e%3c/svg%3e`,Jp=[Vp,Hp,Up],Yp=[[`NLI`,`PY`],[`PM-LSH`,`PY`],[`neural-network-breast-cancer`,`PY`],[`Network-File-System`,`C++`],[`Facial-Attendance-Platform`,`PY`],[`Rocket-Bookmark-Tool`,`RS`],[`Cartify`,`JS`],[`RDT-Protocol`,`PY`],[`DV-Router`,`PY`],[`Ocean-data-pipeline`,`PY`],[`fair_share`,`TS`],[`fair-share-azure`,`HTML`],[`vendor-network`,`HCL`],[`vendor-data`,`TS`],[`vendor-twitter`,`GIT`],[`E-Commerce-Web-Application`,`PHP`],[`FlutterWorkout`,`DART`],[`FightClass`,`C#`],[`Fighter-Hierarchy`,`C#`],[`Aerial-Ascent`,`C`],[`OOP-NOVA`,`C++`],[`MyShell`,`C++`],[`Covid-19-Data`,`C++`],[`Road-Synchronization`,`C++`],[`Sudoku-Solver`,`JAVA`],[`Trivia-Game`,`C++`],[`HTML-Manager`,`JAVA`],[`Treasure-Hunt`,`C++`],[`neetcode-submissions`,`PY`],[`fall25-csc-bioinf`,`NB`],[`personal-web`,`JS`],[`csc503`,`PY`],[`597proj`,`PY`],[`502_proj`,`PY`],[`final_proj`,`PY`],[`Milorph`,`GIT`]],Xp=[{text:`CODE!`,color:`#e8c100`,bg:`rgba(232,193,0,0.12)`,border:`rgba(232,193,0,0.5)`},{text:`WORK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`},{text:`TALK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`}],Zp=[{id:`github`,label:`GITHUB`,handle:`@Milorph`,href:`https://github.com/Milorph`,icon:`⌨`,barIcon:Gp,newBars:[0,1],counts:Yp.map(([,e])=>e),links:Yp.map(([e])=>`github.com/Milorph/${e}`),stats:[{tag:`REP`,value:`36`,color:`#6ee8ff`},{tag:`LNG`,value:`10+`,color:`#b3f0ff`}]},{id:`linkedin`,label:`LINKEDIN`,handle:`in/robert-widjaja`,href:`https://www.linkedin.com/in/robert-widjaja/`,icon:`💼`,barIcon:Kp,newBars:[0],counts:[`CA`],links:[`linkedin.com/in/robert-widjaja`],stats:[{tag:`ROLE`,value:`SWE`,color:`#4a8fff`},{tag:`LOC`,value:`CA`,color:`#8ab8ff`}]},{id:`email`,label:`EMAIL`,handle:`robertwinstonwidjaja1@gmail.com`,href:`mailto:robertwinstonwidjaja1@gmail.com`,icon:`✉`,barIcon:qp,newBars:[0],counts:[`24H`],links:[`mail.google.com/mail/?view=cm&fs=1&to=robertwinstonwidjaja1@gmail.com`],stats:[{tag:`INB`,value:`OPEN`,color:`#34d399`},{tag:`RES`,value:`24H`,color:`#a7f3d0`}]}],Qp=5;function $p(){let[e,t]=(0,w.useState)(0),[n,r]=(0,w.useState)(!1),[i,a]=(0,w.useState)(0),[o,s]=(0,w.useState)(0),[c,l]=(0,w.useState)(`left`),u=pt(),d=Math.max(1,Math.ceil(Zp[e].links.length/Qp)),f=Zp[e].links.slice(o*Qp,(o+1)*Qp),p=Zp[e].counts.slice(o*Qp,(o+1)*Qp);(0,w.useEffect)(()=>{let e=setTimeout(()=>r(!0),60);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{s(0),a(0)},[e]);let m=()=>{s(e=>(e-1+d)%d),a(0)},h=()=>{s(e=>(e+1)%d),a(0)};return(0,w.useEffect)(()=>{let n=n=>{if(n.key===`q`||n.key===`Q`){d>1&&m();return}if(n.key===`e`||n.key===`E`){d>1&&h();return}if(c===`left`)n.key===`ArrowUp`&&t(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&t(e=>Math.min(Zp.length-1,e+1)),n.key===`ArrowRight`&&(l(`right`),a(0)),n.key===`Enter`&&window.open(Zp[e].href,`_blank`);else{let e=f.length;n.key===`ArrowUp`&&a(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&a(t=>Math.min(e-1,t+1)),n.key===`ArrowLeft`&&l(`left`),n.key===`Enter`&&window.open(`https://`+f[i],`_blank`)}(n.key===`ArrowLeft`&&c===`left`||n.key===`Escape`||n.key===`Backspace`)&&u(-1)};return window.addEventListener(`keydown`,n),()=>window.removeEventListener(`keydown`,n)},[e,u,c,o,d,f,i]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Wp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(`style`,{children:`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,700;1,700&display=swap');
 
         .sc-root {
@@ -531,7 +575,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ── Each bar ── */
         .sc-bar {
           position: relative;
-          width: 45cqw;
+          width: 45vw;
           height: 64px;
           transition: height 0.3s cubic-bezier(0.22,1,0.36,1);
           background: #111;
@@ -560,7 +604,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .sc-bar-red {
           position: absolute;
           top: 0; left: 0;
-          width: 45cqw;
+          width: 45vw;
           height: 64px;
           background: #c4001a;
           clip-path: polygon(50% 0, 100% 0, 100% 100%, calc(50% - 10px) 100%);
@@ -956,6 +1000,54 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           border-radius: 3px;
           padding: 1px 6px; font-size: 11px;
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .sc-root {
+            position: relative;
+            z-index: 3;
+            height: auto;
+            align-items: stretch;
+            justify-content: flex-start;
+            padding: 9vh 12px 6px;
+            gap: 10px;
+          }
+          .sc-bar, .sc-bar-red { width: 100% !important; }
+          .sc-bar-outer { transform: none !important; }
+          .sc-bar { height: 70px; }
+          .sc-bar-outer.active .sc-bar,
+          .sc-bar-outer.active .sc-bar-red { height: 70px; }
+          .sc-bar-fill { display: none; }
+          .sc-char { display: none; }
+          .sc-role { font-size: 24px; }
+          .sc-label { font-size: 17px; text-align: center; }
+          .sc-bar-outer.active .sc-label { color: #8df6ff; }
+          .sc-bar-outer.active .sc-stat-num { color: #ffffff; }
+
+          .sc-right-nav {
+            position: relative;
+            z-index: 3;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 12px 2px;
+          }
+          .sc-right-nav .sc-nav-btn { font-size: 34px; }
+          .sc-right-nav .sc-nav-label { font-size: 20px; }
+
+          .sc-info-bar-wrap {
+            position: relative !important;
+            z-index: 3;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+            width: auto;
+            height: 46px;
+            margin: 8px 12px;
+          }
+          .sc-info-bar-new { display: none; }
+          .sc-footer { display: none; }
+        }
       `}),(0,Z.jsx)(`div`,{className:`sc-root`,role:`navigation`,children:Zp.map((r,i)=>(0,Z.jsxs)(`div`,{className:`sc-bar-outer${e===i?` active`:``}${n?` mounted`:``}`,onClick:()=>window.open(r.href,`_blank`),onMouseMove:()=>t(i),children:[(0,Z.jsx)(`div`,{className:`sc-bar-red`}),(0,Z.jsxs)(`div`,{className:`sc-bar`,children:[(0,Z.jsx)(`img`,{className:`sc-char`,src:Jp[i],alt:``}),(0,Z.jsx)(`div`,{className:`sc-bar-fill`}),(0,Z.jsx)(`div`,{className:`sc-bar-shade`}),(0,Z.jsxs)(`div`,{className:`sc-bar-content`,children:[(0,Z.jsx)(`div`,{className:`sc-role`,children:Xp[i].text}),(0,Z.jsx)(`div`,{className:`sc-main`,children:(0,Z.jsxs)(`div`,{className:`sc-main-top`,children:[(0,Z.jsx)(`div`,{className:`sc-icon`,children:r.icon}),(0,Z.jsx)(`div`,{className:`sc-label`,children:r.label})]})}),(0,Z.jsx)(`div`,{className:`sc-stats`,children:r.stats.map(e=>(0,Z.jsxs)(`div`,{className:`sc-stat`,children:[(0,Z.jsxs)(`div`,{className:`sc-stat-top`,children:[(0,Z.jsx)(`span`,{className:`sc-stat-tag`,style:{color:e.color,borderColor:e.color},children:e.tag}),(0,Z.jsx)(`span`,{className:`sc-stat-num`,children:e.value})]}),(0,Z.jsxs)(`div`,{className:`sc-stat-bars`,children:[(0,Z.jsx)(`div`,{className:`sc-stat-bar-color`,style:{background:e.color}}),(0,Z.jsx)(`div`,{className:`sc-stat-bar-black`})]})]},e.tag))})]})]})]},r.id))}),n&&(0,Z.jsxs)(`div`,{className:`sc-right-nav`,children:[(0,Z.jsx)(`span`,{className:`sc-nav-arrow left`,children:`◄`}),(0,Z.jsx)(`span`,{className:`sc-nav-btn${d>1?` sc-nav-btn-active`:``}`,onClick:d>1?m:void 0,children:`LB`}),(0,Z.jsxs)(`span`,{className:`sc-nav-label`,children:[Zp[e].label,d>1?` · ${o+1}/${d}`:``]}),(0,Z.jsx)(`span`,{className:`sc-nav-btn${d>1?` sc-nav-btn-active`:``}`,onClick:d>1?h:void 0,children:`RB`}),(0,Z.jsx)(`span`,{className:`sc-nav-arrow right`,children:`►`})]},e),n&&f.map((t,n)=>(0,Z.jsxs)(`div`,{className:`sc-info-bar-wrap${i===n?` selected`:``}`,style:{top:`${155+n*52}px`,animationDelay:`${n*50}ms`},onClick:()=>{a(n),window.open(`https://`+t,`_blank`)},onMouseMove:()=>a(n),children:[o===0&&Zp[e].newBars.includes(n)&&(0,Z.jsx)(`img`,{className:`sc-info-bar-new`,src:`/robert-persona/assets/newsign-Dnb_rKJG.png`,alt:``}),(0,Z.jsxs)(`div`,{className:`sc-info-bar`,children:[(0,Z.jsx)(`img`,{className:`sc-info-bar-icon`,src:Zp[e].barIcon,alt:``}),(0,Z.jsx)(`span`,{className:`sc-info-bar-text`,children:(Zp[e].id===`github`?t.replace(`github.com/Milorph/`,``):t).slice(0,30)}),(0,Z.jsx)(`span`,{className:`sc-info-bar-box`,children:`OPEN`}),(0,Z.jsx)(`span`,{className:`sc-info-bar-count`,children:p[n]})]})]},`bar-${e}-${o}-${n}`)),(0,Z.jsxs)(`div`,{className:`sc-footer${n?` mounted`:``}`,children:[(0,Z.jsxs)(`div`,{className:`sc-footer-row`,children:[(0,Z.jsx)(`span`,{className:`sc-footer-key`,children:`↑↓`}),(0,Z.jsx)(`span`,{children:`SELECT`})]}),(0,Z.jsxs)(`div`,{className:`sc-footer-row`,children:[(0,Z.jsx)(`span`,{className:`sc-footer-key`,children:`Q/E`}),(0,Z.jsx)(`span`,{children:`PAGE`})]}),(0,Z.jsxs)(`div`,{className:`sc-footer-row`,children:[(0,Z.jsx)(`span`,{className:`sc-footer-key`,children:`↵`}),(0,Z.jsx)(`span`,{children:`OPEN`})]}),(0,Z.jsxs)(`div`,{className:`sc-footer-row`,children:[(0,Z.jsx)(`span`,{className:`sc-footer-key`,children:`ESC`}),(0,Z.jsx)(`span`,{children:`BACK`})]})]})]})}var em=`/robert-persona/assets/lavenza-DE0kvPlr.webm`,tm=`/robert-persona/assets/reveal1-BJn_EmwR.jpg`,nm=`/robert-persona/assets/reveal2-B9_2fvrz.jpg`,rm=`/robert-persona/assets/reveal3--QWuNfeU.png`,im=[Vp,Hp,Up],am=[tm,nm,rm],om=[{upper:[`Robert Winston Widjaja!`,`Software Developer, MDO Tools at Bombardier Advanced Design!`,`Machine learning is my main quest! Data scientist or SWE, I take both routes!`],lower:`based in canada, building the tools that design aircraft!`},{upper:[`MEng Applied Data Science at UVic, GPA 8.32 out of 9!`,`BSc Computer Science at Seattle University, class of 2024!`,`Past arcs: Amazon, Bilimetrix, and a UVic TA run. All cleared!`],lower:`every quest completed, zero retries needed!`},{upper:[`Reimplemented the PM-LSH algorithm straight from a research paper. For fun!`,`Built a RAG fact-checking pipeline that hits 89.1% FEVER accuracy!`,`Taught 200+ engineering students and survived every single lab!`],lower:`and yes, i debug matlab. voluntarily!`}],sm=[{text:`LEADER`,color:`#e8c100`,bg:`rgba(232,193,0,0.12)`,border:`rgba(232,193,0,0.5)`},{text:`PARTY`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`},{text:`PARTY`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`}],cm=[{id:`twitch`,label:`WHO I AM`,handle:`@yourname`,href:`https://twitch.tv/yourname`,icon:`🎮`,bars:1,newBars:[0],counts:[`56`],links:[`twitch.tv/videos/2041837265`],stats:[{tag:`FOL`,value:`1.2K`,color:`#9147ff`},{tag:`VWR`,value:`042`,color:`#bf94ff`}]},{id:`instagram`,label:`EDUCATION + EXPERIENCE`,handle:`@yourhandle`,href:`https://instagram.com/yourhandle`,icon:`📷`,bars:5,newBars:[1,2],counts:[`3.4M`,`2.5M`,`676K`,`412K`,`198K`],links:[`instagram.com/p/C4xQmRrNk2a`,`instagram.com/p/C3wLpBsOj7f`,`instagram.com/reel/C2vKoArMi6e`,`instagram.com/p/C1uJnZqLh5d`,`instagram.com/reel/C0tImYpKg4c`],stats:[{tag:`FOL`,value:`3.4K`,color:`#e1306c`},{tag:`PST`,value:`128`,color:`#f77737`}]},{id:`tiktok`,label:`FUN FACTS ABOUT ME`,handle:`@yourhandle`,href:`https://tiktok.com/@yourhandle`,icon:`🎵`,bars:7,newBars:[0,3,5,6],counts:[`5.1M`,`3.7M`,`2.2M`,`1.4M`,`831K`,`490K`,`217K`],links:[`tiktok.com/@yourhandle/video/7318492016374859054`,`tiktok.com/@yourhandle/video/7305837261940183342`,`tiktok.com/@yourhandle/video/7291046385720348974`,`tiktok.com/@yourhandle/video/7278392047163820334`,`tiktok.com/@yourhandle/video/7264819203847165742`,`tiktok.com/@yourhandle/video/7251047382916430126`,`tiktok.com/@yourhandle/video/7237294018463851822`],stats:[{tag:`FOL`,value:`8.9K`,color:`#00f2ea`},{tag:`LKS`,value:`52K`,color:`#ff0050`}]}];function lm(){let[e,t]=(0,w.useState)(0),[n,r]=(0,w.useState)(!1),[i,a]=(0,w.useState)(!1),o=pt();return(0,w.useEffect)(()=>{let e=setTimeout(()=>r(!0),60);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{let e=e=>{e.key===`ArrowUp`&&t(e=>Math.max(0,e-1)),e.key===`ArrowDown`&&t(e=>Math.min(cm.length-1,e+1)),e.key===`Enter`&&a(!0),e.key===`ArrowRight`&&a(!0),e.key===`ArrowLeft`&&(i?a(!1):o(-1)),(e.key===`Escape`||e.key===`Backspace`)&&o(-1)};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[e,o,i]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:em,autoPlay:!0,loop:!0,muted:!0,playsInline:!0,style:{objectPosition:`center top`}}),i&&(0,Z.jsx)(`div`,{className:`sc-dim`},`dim-${e}`),i&&(0,Z.jsxs)(`div`,{className:`sc-reveal-panel${n?` mounted`:``}`,children:[(0,Z.jsx)(`div`,{className:`sc-reveal-upper-bar`,children:om[e].upper.map(e=>(0,Z.jsx)(`div`,{className:`sc-reveal-upper-line`,children:e},e))}),(0,Z.jsx)(`div`,{className:`sc-reveal-lower-bar`,children:om[e].lower})]},`panel-${e}`),i&&(0,Z.jsxs)(`div`,{className:`sc-right-nav`,children:[(0,Z.jsx)(`span`,{className:`sc-nav-arrow left`,children:`◄`}),(0,Z.jsx)(`span`,{className:`sc-nav-btn`,children:`LB`}),(0,Z.jsx)(`span`,{className:`sc-nav-dot`}),(0,Z.jsx)(`span`,{className:`sc-nav-btn`,children:`RB`}),(0,Z.jsx)(`span`,{className:`sc-nav-arrow right`,children:`►`})]},`nav-${e}`),i&&(0,Z.jsx)(`div`,{className:`sc-main-portrait-shell${n?` mounted`:``}`,children:(0,Z.jsx)(`img`,{className:`sc-main-portrait`,src:am[e],alt:``})},`portrait-${e}`),(0,Z.jsx)(`style`,{children:`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,700;1,700&family=Montserrat:wght@300&display=swap');
 
@@ -1036,11 +1128,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .sc-main-portrait-shell {
           position: absolute;
           top: 0;
-          right: -3cqw;
+          right: -3vw;
           z-index: 13;
           pointer-events: none;
-          width: 43cqw;
-          height: 100cqh;
+          width: 43vw;
+          height: 100vh;
           overflow: hidden;
           opacity: 0;
           transform: translateX(24px) skewX(-8deg) scale(0.98);
@@ -1054,10 +1146,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .sc-reveal-panel {
           position: absolute;
-          top: 44cqh;
-          left: -6cqw;
-          width: 88cqw;
-          height: 60cqh;
+          top: 44vh;
+          left: -6vw;
+          width: 88vw;
+          height: 60vh;
           z-index: 12;
           pointer-events: none;
           background:
@@ -1146,8 +1238,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .sc-right-nav {
           position: absolute;
-          top: 10cqh;
-          left: 6cqw;
+          top: 10vh;
+          left: 6vw;
           display: flex;
           align-items: center;
           gap: 6px;
@@ -1201,7 +1293,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ── Each bar ── */
         .sc-bar {
           position: relative;
-          width: 45cqw;
+          width: 45vw;
           height: 64px;
           transition: height 0.3s cubic-bezier(0.22,1,0.36,1);
           background: #111;
@@ -1230,7 +1322,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .sc-bar-red {
           position: absolute;
           top: 0; left: 0;
-          width: 45cqw;
+          width: 45vw;
           height: 64px;
           background: #c4001a;
           clip-path: polygon(50% 0, 100% 0, 100% 100%, calc(50% - 10px) 100%);
@@ -1444,6 +1536,73 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           border-radius: 3px;
           padding: 1px 6px; font-size: 11px;
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .sc-root {
+            position: relative;
+            z-index: 3;
+            height: auto;
+            align-items: stretch;
+            justify-content: flex-start;
+            padding: 10vh 12px 46vh;
+            gap: 10px;
+          }
+          .sc-bar, .sc-bar-red { width: 100% !important; }
+          .sc-bar-outer { transform: none !important; }
+          .sc-bar { height: 74px; }
+          .sc-bar-outer.active .sc-bar,
+          .sc-bar-outer.active .sc-bar-red { height: 74px; }
+          .sc-bar-fill { display: none; }
+          .sc-char { display: none; }
+          .sc-role { font-size: 26px; }
+          .sc-label { font-size: 17px; text-align: center; }
+          .sc-bar-outer.active .sc-label { color: #8df6ff; }
+
+          /* reveal: full-width bottom sheet, no rotation, bars stay tappable */
+          .sc-dim { display: none; }
+          .sc-main-portrait-shell { display: none !important; }
+          .sc-right-nav { display: none !important; }
+          .sc-reveal-panel {
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            min-height: 40vh;
+            transform: none !important;
+            clip-path: none;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -8px 24px rgba(0,0,0,0.5);
+            padding: 16px 14px 20px;
+            animation: none !important;
+            z-index: 40;
+          }
+          .sc-reveal-panel::before { display: none; }
+          .sc-reveal-upper-bar {
+            position: static;
+            width: 100%;
+            height: auto;
+            clip-path: none;
+            padding: 14px;
+            gap: 8px;
+            border-radius: 10px;
+          }
+          .sc-reveal-upper-line { font-size: 18px; }
+          .sc-reveal-upper-line:first-child { font-size: 21px; }
+          .sc-reveal-lower-bar {
+            position: static;
+            width: 100%;
+            height: auto;
+            clip-path: none;
+            margin-top: 10px;
+            padding: 12px 14px;
+            font-size: 19px;
+            border-radius: 8px;
+          }
+          .sc-footer { display: none; }
+        }
       `}),(0,Z.jsx)(`div`,{className:`sc-root`,role:`navigation`,children:cm.map((r,i)=>(0,Z.jsxs)(`div`,{className:`sc-bar-outer${e===i?` active`:``}${n?` mounted`:``}`,onClick:()=>{t(i),a(!0)},onMouseMove:()=>{t(i)},children:[(0,Z.jsx)(`div`,{className:`sc-bar-red`}),(0,Z.jsxs)(`div`,{className:`sc-bar`,children:[(0,Z.jsx)(`img`,{className:`sc-char`,src:im[i],alt:``}),(0,Z.jsx)(`div`,{className:`sc-bar-fill`}),(0,Z.jsx)(`div`,{className:`sc-bar-shade`}),(0,Z.jsxs)(`div`,{className:`sc-bar-content`,children:[(0,Z.jsx)(`div`,{className:`sc-role`,children:sm[i].text}),(0,Z.jsx)(`div`,{className:`sc-main`,children:(0,Z.jsx)(`div`,{className:`sc-main-top`,children:(0,Z.jsx)(`div`,{className:`sc-label`,children:r.label})})})]})]})]},r.id))}),(0,Z.jsxs)(`div`,{className:`sc-footer${n?` mounted`:``}`,children:[(0,Z.jsxs)(`div`,{className:`sc-footer-row`,children:[(0,Z.jsx)(`span`,{className:`sc-footer-key`,children:`↑↓`}),(0,Z.jsx)(`span`,{children:`SELECT`})]}),(0,Z.jsxs)(`div`,{className:`sc-footer-row`,children:[(0,Z.jsx)(`span`,{className:`sc-footer-key`,children:`↵`}),(0,Z.jsx)(`span`,{children:`REVEAL`})]}),(0,Z.jsxs)(`div`,{className:`sc-footer-row`,children:[(0,Z.jsx)(`span`,{className:`sc-footer-key`,children:`ESC`}),(0,Z.jsx)(`span`,{children:`BACK`})]})]})]})}var um=[{year:`2020`,title:`THE BEGINNING`,place:`Seattle University`,line:`Moved across the world to study Computer Science. First for-loop written. There was no going back!`,status:`ORIGIN`},{year:`2023`,title:`THE AMAZON ARC`,place:`Amazon, Seattle`,line:`Built an internal tool that cut Alexa onboarding from days to minutes. Stakeholders were pleased!`,status:`CLEARED`},{year:`2024`,title:`THE CLINIC ARC`,place:`Bilimetrix USA`,line:`Shipped ML validation pipelines for clinical diagnostics. 96% accuracy targets, hit!`,status:`CLEARED`},{year:`2025`,title:`THE SCHOLAR ARC`,place:`University of Victoria`,line:`MEng in Applied Data Science while teaching 200+ students. Recursion explained. Sanity intact!`,status:`CLEARED`},{year:`2026`,title:`THE CURRENT ARC`,place:`Bombardier, Canada`,line:`Building MDO tools for Advanced Design. Software that helps shape real aircraft. Let's go!`,status:`ACTIVE!`}];function dm({src:e}){let t=pt(),[n,r]=(0,w.useState)(um.length-1),[i,a]=(0,w.useState)(!1);return(0,w.useEffect)(()=>{let e=setTimeout(()=>a(!0),80);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{let e=e=>{e.key===`ArrowUp`&&r(e=>Math.max(0,e-1)),e.key===`ArrowDown`&&r(e=>Math.min(um.length-1,e+1)),(e.key===`ArrowLeft`||e.key===`Escape`||e.key===`Backspace`)&&t(-1)};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[t]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:e,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(`style`,{children:`
         .jr-overlay {
           position: absolute;
@@ -1453,8 +1612,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .jr-tag {
           position: absolute;
-          top: 5cqh;
-          left: 3cqw;
+          top: 5vh;
+          left: 3vw;
           font-family: 'Anton', sans-serif;
           font-style: italic;
           font-size: 84px;
@@ -1474,9 +1633,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .jr-stack {
           position: absolute;
-          top: 22cqh;
-          left: 3cqw;
-          width: min(52cqw, 760px);
+          top: 22vh;
+          left: 3vw;
+          width: min(52vw, 760px);
           display: flex;
           flex-direction: column;
           gap: 12px;
@@ -1550,9 +1709,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .jr-detail {
           position: absolute;
-          top: 24cqh;
-          right: 4cqw;
-          width: min(34cqw, 520px);
+          top: 24vh;
+          right: 4vw;
+          width: min(34vw, 520px);
           z-index: 12;
           padding: 26px 28px;
           background: linear-gradient(180deg, rgba(15, 28, 105, 0.96) 0%, rgba(8, 16, 68, 0.97) 100%);
@@ -1606,12 +1765,46 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           border-radius: 3px;
           padding: 1px 6px; font-size: 11px;
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .jr-overlay { position: relative; z-index: 3; height: auto; }
+          .jr-tag {
+            position: static;
+            font-size: 46px;
+            padding: 11vh 14px 6px;
+            transform: skewX(-6deg);
+          }
+          .jr-stack {
+            position: static;
+            width: 100%;
+            top: auto;
+            left: auto;
+            padding: 0 14px;
+          }
+          .jr-card { grid-template-columns: 82px 1fr auto; min-height: 62px; gap: 10px; }
+          .jr-year { font-size: 32px; }
+          .jr-title { font-size: 21px; }
+          .jr-place { font-size: 14px; }
+          .jr-status { font-size: 15px; padding: 5px 9px; }
+          .jr-detail {
+            position: static;
+            width: auto;
+            top: auto;
+            right: auto;
+            margin: 14px 14px 44px;
+          }
+          .jr-detail-year { font-size: 46px; }
+          .jr-detail-title { font-size: 25px; }
+          .jr-detail-line { font-size: 18px; }
+          .jr-footer { display: none; }
+        }
       `}),(0,Z.jsxs)(`div`,{className:`jr-overlay`,children:[(0,Z.jsxs)(`div`,{className:`jr-tag${i?` mounted`:``}`,children:[`MY `,(0,Z.jsx)(`span`,{children:`JOURNEY`})]}),(0,Z.jsx)(`div`,{className:`jr-stack`,children:um.map((e,t)=>(0,Z.jsxs)(`div`,{className:`jr-card${n===t?` active`:``}${i?` mounted`:``}`,style:{transitionDelay:i?`${t*60}ms`:`0ms`},onMouseMove:()=>r(t),onClick:()=>r(t),children:[(0,Z.jsx)(`div`,{className:`jr-year`,children:e.year}),(0,Z.jsxs)(`div`,{className:`jr-main`,children:[(0,Z.jsx)(`div`,{className:`jr-title`,children:e.title}),(0,Z.jsx)(`div`,{className:`jr-place`,children:e.place})]}),(0,Z.jsx)(`div`,{className:`jr-status`,children:e.status})]},e.year))}),(0,Z.jsxs)(`div`,{className:`jr-detail`,children:[(0,Z.jsx)(`div`,{className:`jr-detail-year`,children:um[n].year}),(0,Z.jsx)(`div`,{className:`jr-detail-title`,children:um[n].title}),(0,Z.jsx)(`div`,{className:`jr-detail-line`,children:um[n].line})]},n)]}),(0,Z.jsxs)(`div`,{className:`jr-footer${i?` mounted`:``}`,children:[(0,Z.jsxs)(`div`,{className:`jr-footer-row`,children:[(0,Z.jsx)(`span`,{className:`jr-footer-key`,children:`↑↓`}),(0,Z.jsx)(`span`,{children:`SELECT`})]}),(0,Z.jsxs)(`div`,{className:`jr-footer-row`,children:[(0,Z.jsx)(`span`,{className:`jr-footer-key`,children:`ESC`}),(0,Z.jsx)(`span`,{children:`BACK`})]})]})]})}var fm={neutral:`/robert-persona/assets/aki_neutral-DLoJN4jo.png`,happy:`/robert-persona/assets/aki_happy-v9tVvVBj.png`,excited:`/robert-persona/assets/aki_excited-B2jfFFoB.png`,proud:`/robert-persona/assets/aki_proud-xUmtrSdA.png`,think:`/robert-persona/assets/aki_think-DLM20hCU.png`,determined:`/robert-persona/assets/aki_determined-hvNm3gPp.png`,grimace:`/robert-persona/assets/aki_grimace-CrHAHjMe.png`},pm={emotion:`neutral`,text:`Hey! You actually clicked! Welcome to my corner of the Dark Hour. Pick a question and I will answer honestly. Probably!`},mm=[{q:`Who are you?`,emotion:`happy`,a:`Robert Winston Widjaja! Software developer at Bombardier by day, machine learning enjoyer at all hours! I build the tools that help design actual aircraft. How cool is that!`},{q:`What are you focused on right now?`,emotion:`determined`,a:`Machine learning is the main quest! I am aiming for data scientist and software engineer roles, whichever boss fight comes first. My MDO tooling work at Bombardier levels up both!`},{q:`What is your proudest project?`,emotion:`proud`,a:`My RAG fact-checking pipeline! Four stages, fine-tuned cross-encoders, 89.1% FEVER accuracy! PM-LSH straight from a research paper is a close second. Check the Resume tab!`},{q:`Are you open to opportunities?`,emotion:`excited`,a:`Always! Data scientist or software engineer, bring it on! Head to the Socials tab and send an email or a LinkedIn message. I reply fast!`},{q:`What do you do for fun?`,emotion:`grimace`,a:`Clearly I build Persona-themed websites! Also the gym, gaming, and reimplementing algorithms from papers, because apparently that is my idea of relaxing!`},{q:`Any advice for future teammates?`,emotion:`think`,a:`Write tests! And name your variables like a stranger will read them, because a stranger will. Usually it is you, three months later, very confused!`}],hm={excited:`!`,determined:`!!`,proud:`star`,happy:`heart`,think:`...`,grimace:`drop`,neutral:null};function gm({src:e}){let t=pt(),[n,r]=(0,w.useState)(0),[i,a]=(0,w.useState)(pm),[o,s]=(0,w.useState)(``),[c,l]=(0,w.useState)(!1),[u,d]=(0,w.useState)(0),f=(0,w.useRef)(null);(0,w.useEffect)(()=>{let e=setTimeout(()=>l(!0),80);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{clearInterval(f.current),s(``);let e=0;return f.current=setInterval(()=>{e+=2,s(i.text.slice(0,e)),e>=i.text.length&&clearInterval(f.current)},18),()=>clearInterval(f.current)},[i]);let p=e=>{r(e),a({emotion:mm[e].emotion,text:mm[e].a}),d(e=>e+1)};(0,w.useEffect)(()=>{let e=e=>{e.key===`ArrowUp`&&r(e=>Math.max(0,e-1)),e.key===`ArrowDown`&&r(e=>Math.min(mm.length-1,e+1)),e.key===`Enter`&&p(n),(e.key===`ArrowLeft`||e.key===`Escape`||e.key===`Backspace`)&&t(-1)};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[n,t]);let m=hm[i.emotion];return(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:e,autoPlay:!0,loop:!0,muted:!0,playsInline:!0,style:{filter:`brightness(0.45) saturate(1.1)`}}),(0,Z.jsx)(`style`,{children:`
         .tk-overlay { position: absolute; inset: 0; z-index: 10; overflow: hidden; }
 
         .tk-tag {
           position: absolute;
-          top: 5cqh; left: 3cqw;
+          top: 5vh; left: 3vw;
           font-family: 'Anton', sans-serif;
           font-style: italic;
           font-size: 76px;
@@ -1628,10 +1821,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- sprite ---- */
         .tk-sprite-wrap {
           position: absolute;
-          right: 7cqw;
+          right: 7vw;
           bottom: 0;
-          height: 66cqh;
-          width: 32cqw;
+          height: 66vh;
+          width: 32vw;
           display: flex;
           align-items: flex-end;
           justify-content: center;
@@ -1667,8 +1860,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- emotion balloon ---- */
         .tk-balloon {
           position: absolute;
-          top: 4cqh;
-          right: 6cqw;
+          top: 4vh;
+          right: 6vw;
           width: 84px;
           height: 84px;
           background: #ffffff;
@@ -1712,9 +1905,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- questions ---- */
         .tk-questions {
           position: absolute;
-          top: 18cqh;
-          left: 3cqw;
-          width: min(44cqw, 640px);
+          top: 18vh;
+          left: 3vw;
+          width: min(44vw, 640px);
           display: flex;
           flex-direction: column;
           gap: 10px;
@@ -1752,9 +1945,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- dialogue box ---- */
         .tk-dialog {
           position: absolute;
-          left: 3cqw;
-          bottom: 5cqh;
-          width: min(58cqw, 900px);
+          left: 3vw;
+          bottom: 5vh;
+          width: min(58vw, 900px);
           min-height: 148px;
           z-index: 13;
           background: rgba(4, 8, 26, 0.92);
@@ -1821,6 +2014,49 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           border-radius: 3px;
           padding: 1px 6px; font-size: 11px;
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .tk-overlay {
+            position: relative;
+            z-index: 3;
+            height: auto;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7vh 12px 34px;
+            gap: 14px;
+          }
+          .tk-tag { position: static; font-size: 40px; text-align: center; order: 0; }
+          .tk-sprite-wrap {
+            position: static;
+            width: 62vw;
+            height: auto;
+            max-height: 30vh;
+            transform: none !important;
+            order: 1;
+          }
+          .tk-sprite { max-height: 30vh; max-width: 100%; }
+          .tk-balloon { top: 11vh; right: 8vw; width: 58px; height: 58px; }
+          .tk-questions {
+            position: static;
+            width: 100%;
+            max-width: 520px;
+            top: auto;
+            left: auto;
+            order: 2;
+          }
+          .tk-q { font-size: 18px; padding: 10px 18px; }
+          .tk-dialog {
+            position: static;
+            width: 100%;
+            max-width: 560px;
+            min-height: 108px;
+            order: 3;
+          }
+          .tk-footer { display: none; }
+        }
       `}),(0,Z.jsxs)(`div`,{className:`tk-overlay`,children:[(0,Z.jsxs)(`div`,{className:`tk-tag${c?` mounted`:``}`,children:[`TALK TO `,(0,Z.jsx)(`span`,{children:`ME`})]}),(0,Z.jsx)(`div`,{className:`tk-questions`,children:mm.map((e,t)=>(0,Z.jsx)(`button`,{className:`tk-q${n===t?` sel`:``}${c?` mounted`:``}`,style:{transitionDelay:c?`${t*55}ms`:`0ms`},onMouseMove:()=>r(t),onClick:()=>p(t),children:e.q},e.q))}),(0,Z.jsx)(`div`,{className:`tk-sprite-wrap ${i.emotion}${c?` mounted`:``}`,children:(0,Z.jsx)(`img`,{className:`tk-sprite`,src:fm[i.emotion]??`/robert-persona/assets/aki_neutral-DLoJN4jo.png`,alt:``})},`sprite-${u}`),m&&(0,Z.jsxs)(`div`,{className:`tk-balloon`,children:[m===`heart`&&(0,Z.jsx)(`div`,{className:`tk-shape-heart`}),m===`star`&&(0,Z.jsx)(`div`,{className:`tk-shape-star`}),m===`drop`&&(0,Z.jsx)(`div`,{className:`tk-shape-drop`}),m!==`heart`&&m!==`star`&&m!==`drop`&&(0,Z.jsx)(`div`,{className:`tk-balloon-glyph`,children:m})]},`balloon-${u}`),(0,Z.jsxs)(`div`,{className:`tk-dialog${c?` mounted`:``}`,children:[(0,Z.jsx)(`div`,{className:`tk-dialog-name`,children:`ROBERT`}),(0,Z.jsxs)(`div`,{className:`tk-dialog-text`,children:[o,o.length>=i.text.length&&(0,Z.jsx)(`span`,{className:`tk-dialog-caret`})]})]})]}),(0,Z.jsxs)(`div`,{className:`tk-footer`,children:[(0,Z.jsxs)(`div`,{className:`tk-footer-row`,children:[(0,Z.jsx)(`span`,{className:`tk-footer-key`,children:`↑↓`}),(0,Z.jsx)(`span`,{children:`SELECT`})]}),(0,Z.jsxs)(`div`,{className:`tk-footer-row`,children:[(0,Z.jsx)(`span`,{className:`tk-footer-key`,children:`↵`}),(0,Z.jsx)(`span`,{children:`ASK`})]}),(0,Z.jsxs)(`div`,{className:`tk-footer-row`,children:[(0,Z.jsx)(`span`,{className:`tk-footer-key`,children:`ESC`}),(0,Z.jsx)(`span`,{children:`BACK`})]})]})]})}function _m(){let e=(0,w.useRef)(null),[t,n]=(0,w.useState)(!1);return(0,w.useEffect)(()=>{let t=e.current;t.volume=.35;let r=()=>{t.play().then(()=>n(!0)).catch(()=>{}),window.removeEventListener(`pointerdown`,r),window.removeEventListener(`keydown`,r)};return t.play().then(()=>n(!0)).catch(()=>{window.addEventListener(`pointerdown`,r),window.addEventListener(`keydown`,r)}),()=>{window.removeEventListener(`pointerdown`,r),window.removeEventListener(`keydown`,r)}},[]),(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(`style`,{children:`
         .bgm-toggle {
           position: fixed;
@@ -1846,4 +2082,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .bgm-toggle .bgm-state { color: #8df6ff; }
         .bgm-toggle:hover .bgm-state { color: #06133b; }
-      `}),(0,Z.jsx)(`audio`,{ref:e,src:Dp,loop:!0}),(0,Z.jsxs)(`button`,{className:`bgm-toggle`,onClick:()=>{let r=e.current;t?(r.pause(),n(!1)):r.play().then(()=>n(!0)).catch(()=>{})},children:[`SOUND `,(0,Z.jsx)(`span`,{className:`bgm-state`,children:t?`ON`:`OFF`})]})]})}function vm(){let e=pt();return(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Cp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(Ap,{onNavigate:t=>{t===`github`?window.open(`https://github.com/Milorph`,`_blank`):e(`/${t}`)}})]})}function ym(){let e=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Bt,{location:e,children:[(0,Z.jsx)(Rt,{path:`/`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(vm,{})})}),(0,Z.jsx)(Rt,{path:`/about`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(lm,{})})}),(0,Z.jsx)(Rt,{path:`/resume`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(Np,{src:Tp})})}),(0,Z.jsx)(Rt,{path:`/socials`,element:(0,Z.jsx)(Bp,{variant:`socials`,children:(0,Z.jsx)($p,{})})}),(0,Z.jsx)(Rt,{path:`/journey`,element:(0,Z.jsx)(Bp,{variant:`resume`,children:(0,Z.jsx)(dm,{src:Ep})})}),(0,Z.jsx)(Rt,{path:`/talk`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(gm,{src:wp})})})]},e.pathname)})}function bm(){return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(_m,{}),(0,Z.jsx)(ym,{})]})}var xm=1920,Sm=1080;function Cm({children:e}){return(0,w.useEffect)(()=>{let e=document.getElementById(`stage`),t=()=>{let t=Math.min(window.innerWidth/xm,window.innerHeight/Sm);e&&e.style.setProperty(`--stage-scale`,t)};return t(),window.addEventListener(`resize`,t),window.addEventListener(`orientationchange`,t),()=>{window.removeEventListener(`resize`,t),window.removeEventListener(`orientationchange`,t)}},[]),(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(`div`,{id:`stage`,children:e}),(0,Z.jsx)(`div`,{className:`rotate-hint`,role:`alert`,children:(0,Z.jsxs)(`div`,{className:`rotate-hint-inner`,children:[(0,Z.jsx)(`div`,{className:`rotate-icon`,children:`⟳`}),(0,Z.jsx)(`div`,{className:`rotate-title`,children:`Rotate Your Device`}),(0,Z.jsx)(`div`,{className:`rotate-sub`,children:`This palace is best infiltrated in landscape. Turn your phone sideways to continue.`})]})})]})}(0,Yn.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(w.StrictMode,{children:(0,Z.jsx)(Cm,{children:(0,Z.jsx)(On,{children:(0,Z.jsx)(bm,{})})})}));
+      `}),(0,Z.jsx)(`audio`,{ref:e,src:Dp,loop:!0}),(0,Z.jsxs)(`button`,{className:`bgm-toggle`,onClick:()=>{let r=e.current;t?(r.pause(),n(!1)):r.play().then(()=>n(!0)).catch(()=>{})},children:[`SOUND `,(0,Z.jsx)(`span`,{className:`bgm-state`,children:t?`ON`:`OFF`})]})]})}function vm(){let e=pt();return(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Cp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(Ap,{onNavigate:t=>{t===`github`?window.open(`https://github.com/Milorph`,`_blank`):e(`/${t}`)}})]})}function ym(){let e=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Bt,{location:e,children:[(0,Z.jsx)(Rt,{path:`/`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(vm,{})})}),(0,Z.jsx)(Rt,{path:`/about`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(lm,{})})}),(0,Z.jsx)(Rt,{path:`/resume`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(Np,{src:Tp})})}),(0,Z.jsx)(Rt,{path:`/socials`,element:(0,Z.jsx)(Bp,{variant:`socials`,children:(0,Z.jsx)($p,{})})}),(0,Z.jsx)(Rt,{path:`/journey`,element:(0,Z.jsx)(Bp,{variant:`resume`,children:(0,Z.jsx)(dm,{src:Ep})})}),(0,Z.jsx)(Rt,{path:`/talk`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(gm,{src:wp})})})]},e.pathname)})}function bm(){return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(_m,{}),(0,Z.jsx)(ym,{})]})}(0,Yn.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(w.StrictMode,{children:(0,Z.jsx)(On,{children:(0,Z.jsx)(bm,{})})}));

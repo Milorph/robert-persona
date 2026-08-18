@@ -1220,7 +1220,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           position: absolute;
           top: 54%;
           left: 35%;
-          width: 44%;
+          width: 53%;
           height: 20%;
           background: rgba(0, 0, 0, 0.92);
           clip-path: polygon(0 0, 100% 0, calc(100% - 22px) 100%, 0 100%);

@@ -14,8 +14,8 @@ const DETAILS = [
     title: "EDUCATION",
     progress: "2/2",
     rows: [
-      { index: "01", title: "MEng Applied Data Science, UVic", status: "GPA 8.32/9" },
-      { index: "02", title: "BSc Computer Science, Seattle U", status: "GPA 3.61/4" },
+      { index: "01", title: "MEng Applied Data Science, UVic", status: "In Progress" },
+      { index: "02", title: "BSc Computer Science, Seattle U", status: "Completed" },
       { index: "03", title: "Led Labs For 200+ Students", status: "Completed" },
       { index: "04", title: "Python / C++ / MATLAB Teaching", status: "Completed" },
     ],

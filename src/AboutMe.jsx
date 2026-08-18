@@ -18,11 +18,11 @@ const REVEAL_CONTENT = [
       "Software Developer, MDO Tools at Bombardier Advanced Design",
       "Focused on machine learning, with experience across full-stack development and data science",
     ],
-    lower: "Based in Canada, building optimization tools for aircraft design",
+    lower: "Building optimization tools for aircraft design",
   },
   {
     upper: [
-      "MEng in Applied Data Science, University of Victoria (GPA 8.32/9.00)",
+      "MEng in Applied Data Science, University of Victoria",
       "BSc in Computer Science, Seattle University, Class of 2024",
       "Previous experience: Amazon, Bilimetrix, and a teaching assistantship at UVic",
     ],
@@ -298,9 +298,9 @@ export default function AboutMe() {
         }
         .sc-reveal-lower-bar {
           position: absolute;
-          top: 54%;
-          left: 35%;
-          width: 53%;
+          top: 60%;
+          right: 0;
+          width: 45%;
           height: 20%;
           background: rgba(0, 0, 0, 0.92);
           clip-path: polygon(0 0, 100% 0, calc(100% - 22px) 100%, 0 100%);

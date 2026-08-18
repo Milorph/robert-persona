@@ -376,7 +376,7 @@ export default function Talk({ src }) {
       `}</style>
 
       <div className="tk-overlay">
-        <div className={`tk-tag${mounted ? " mounted" : ""}`}>ASK ABOUT <span>ME</span></div>
+        <div className={`tk-tag${mounted ? " mounted" : ""}`}>QUEST<span>IONS</span></div>
 
         <div className="tk-questions">
           {QUESTIONS.map((item, i) => (

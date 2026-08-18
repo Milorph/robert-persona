@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 const ITEMS = [
   { id: "about",   label: "ABOUT ME",      page: "about",   fontSize: 70, offsetX: 0,  offsetY: 0, skew: -6,  skewY: 7  },
   { id: "resume",  label: "RESUME",        page: "resume",  fontSize: 60, offsetX: 20, offsetY: 0, skew: -10, skewY: -7 },
-  { id: "github",  label: "GITHUB",        page: "github",  fontSize: 66, offsetX: 8,  offsetY: 0, skew: -4,  skewY: 7  },
-  { id: "socials", label: "SOCIALS",       page: "socials", fontSize: 66, offsetX: 16, offsetY: 0, skew: -8,  skewY: -7 },
-  { id: "journey", label: "JOURNEY",       page: "journey", fontSize: 64, offsetX: 10, offsetY: 0, skew: -5,  skewY: 7  },
-  { id: "talk",    label: "ASK ABOUT ME",  page: "talk",    fontSize: 54, offsetX: 4,  offsetY: 0, skew: -9,  skewY: -7 },
+  { id: "socials", label: "SOCIALS",       page: "socials", fontSize: 66, offsetX: 16, offsetY: 0, skew: -8,  skewY: 7  },
+  { id: "journey", label: "JOURNEY",       page: "journey", fontSize: 64, offsetX: 10, offsetY: 0, skew: -5,  skewY: -7 },
+  { id: "talk",    label: "QUESTIONS",     page: "talk",    fontSize: 64, offsetX: 4,  offsetY: 0, skew: -9,  skewY: 7  },
 ];
 
 const CLIP_SHAPES = [

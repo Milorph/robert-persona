@@ -22,20 +22,8 @@ function MusicPlayer() {
 
   useEffect(() => {
     const audio = audioRef.current
-    audio.volume = 0.35
-    const start = () => {
-      audio.play().then(() => setPlaying(true)).catch(() => {})
-      window.removeEventListener('pointerdown', start)
-      window.removeEventListener('keydown', start)
-    }
-    audio.play().then(() => setPlaying(true)).catch(() => {
-      window.addEventListener('pointerdown', start)
-      window.addEventListener('keydown', start)
-    })
-    return () => {
-      window.removeEventListener('pointerdown', start)
-      window.removeEventListener('keydown', start)
-    }
+    if (audio) audio.volume = 0.35
+    // Sound is off by default; the visitor turns it on with the toggle.
   }, [])
 
   const toggle = () => {
@@ -83,11 +71,7 @@ function MusicPlayer() {
 function MenuScreen() {
   const navigate = useNavigate()
   const handleNavigate = (page) => {
-    if (page === 'github') {
-      window.open('https://github.com/Milorph', '_blank')
-    } else {
-      navigate(`/${page}`)
-    }
+    navigate(`/${page}`)
   }
   return (
     <div id="menu-screen">
@@ -132,10 +116,9 @@ const NAV_ITEMS = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About Me" },
   { path: "/resume", label: "Resume" },
-  { path: "github", label: "GitHub" },
   { path: "/socials", label: "Socials" },
   { path: "/journey", label: "Journey" },
-  { path: "/talk", label: "Ask About Me" },
+  { path: "/talk", label: "Questions" },
 ]
 
 function MobileNav() {
@@ -150,8 +133,7 @@ function MobileNav() {
 
   const go = (path) => {
     setOpen(false)
-    if (path === "github") window.open("https://github.com/Milorph", "_blank")
-    else navigate(path)
+    navigate(path)
   }
 
   return (

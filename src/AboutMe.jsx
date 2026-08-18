@@ -14,34 +14,34 @@ const MAIN_IMAGES = [reveal1, reveal2, reveal3];
 const REVEAL_CONTENT = [
   {
     upper: [
-      "Robert Winston Widjaja!",
-      "Software Developer, MDO Tools at Bombardier Advanced Design!",
-      "Machine learning is my main quest! Data scientist or SWE, I take both routes!",
+      "Robert Winston Widjaja",
+      "Software Developer, MDO Tools at Bombardier Advanced Design",
+      "Focused on machine learning, with experience across full-stack development and data science",
     ],
-    lower: "based in canada, building the tools that design aircraft!",
+    lower: "Based in Canada, building optimization tools for aircraft design",
   },
   {
     upper: [
-      "MEng Applied Data Science at UVic, GPA 8.32 out of 9!",
-      "BSc Computer Science at Seattle University, class of 2024!",
-      "Past arcs: Amazon, Bilimetrix, and a UVic TA run. All cleared!",
+      "MEng in Applied Data Science, University of Victoria (GPA 8.32/9.00)",
+      "BSc in Computer Science, Seattle University, Class of 2024",
+      "Previous experience: Amazon, Bilimetrix, and a teaching assistantship at UVic",
     ],
-    lower: "every quest completed, zero retries needed!",
+    lower: "A record of completed roles and academic work",
   },
   {
     upper: [
-      "Reimplemented the PM-LSH algorithm straight from a research paper. For fun!",
-      "Built a RAG fact-checking pipeline that hits 89.1% FEVER accuracy!",
-      "Taught 200+ engineering students and survived every single lab!",
+      "Reimplemented the PM-LSH nearest-neighbor algorithm from its research paper",
+      "Built a retrieval-augmented fact-verification pipeline reaching 89.1% FEVER accuracy",
+      "Led weekly labs for over 200 engineering students",
     ],
-    lower: "and yes, i debug matlab. voluntarily!",
+    lower: "Comfortable working across Python, C++, and MATLAB",
   },
 ];
 
 const ROLES = [
-  { text: "LEADER", color: "#e8c100", bg: "rgba(232,193,0,0.12)", border: "rgba(232,193,0,0.5)" },
-  { text: "PARTY",  color: "#4a8fff", bg: "rgba(74,143,255,0.12)", border: "rgba(74,143,255,0.5)" },
-  { text: "PARTY",  color: "#4a8fff", bg: "rgba(74,143,255,0.12)", border: "rgba(74,143,255,0.5)" },
+  { text: "PROFILE", color: "#e8c100", bg: "rgba(232,193,0,0.12)", border: "rgba(232,193,0,0.5)" },
+  { text: "HISTORY", color: "#4a8fff", bg: "rgba(74,143,255,0.12)", border: "rgba(74,143,255,0.5)" },
+  { text: "NOTES",  color: "#4a8fff", bg: "rgba(74,143,255,0.12)", border: "rgba(74,143,255,0.5)" },
 ];
 
 const ITEMS = [
@@ -62,7 +62,7 @@ const ITEMS = [
     ],
   },
   {
-    id: "tiktok", label: "FUN FACTS ABOUT ME", handle: "@yourhandle", href: "https://tiktok.com/@yourhandle", icon: "🎵", bars: 7, newBars: [0, 3, 5, 6], counts: ["5.1M", "3.7M", "2.2M", "1.4M", "831K", "490K", "217K"],
+    id: "tiktok", label: "HIGHLIGHTS", handle: "@yourhandle", href: "https://tiktok.com/@yourhandle", icon: "🎵", bars: 7, newBars: [0, 3, 5, 6], counts: ["5.1M", "3.7M", "2.2M", "1.4M", "831K", "490K", "217K"],
     links: ["tiktok.com/@yourhandle/video/7318492016374859054", "tiktok.com/@yourhandle/video/7305837261940183342", "tiktok.com/@yourhandle/video/7291046385720348974", "tiktok.com/@yourhandle/video/7278392047163820334", "tiktok.com/@yourhandle/video/7264819203847165742", "tiktok.com/@yourhandle/video/7251047382916430126", "tiktok.com/@yourhandle/video/7237294018463851822"],
     stats: [
       { tag: "FOL", value: "8.9K", color: "#00f2ea" },

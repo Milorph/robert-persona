@@ -20,39 +20,39 @@ const SPRITES = {
 
 const GREETING = {
   emotion: "neutral",
-  text: "Hey! You actually clicked! Welcome to my corner of the Dark Hour. Pick a question and I will answer honestly. Probably!",
+  text: "Thanks for stopping by. Select a question and I will answer it directly.",
 };
 
 const QUESTIONS = [
   {
     q: "Who are you?",
     emotion: "happy",
-    a: "Robert Winston Widjaja! Software developer at Bombardier by day, machine learning enjoyer at all hours! I build the tools that help design actual aircraft. How cool is that!",
+    a: "I am Robert Winston Widjaja, a software developer on Bombardier's Advanced Design team, where I build multidisciplinary design optimization tools for aircraft. My background spans full-stack engineering and machine learning.",
   },
   {
     q: "What are you focused on right now?",
     emotion: "determined",
-    a: "Machine learning is the main quest! I am aiming for data scientist and software engineer roles, whichever boss fight comes first. My MDO tooling work at Bombardier levels up both!",
+    a: "My main focus is machine learning, and I am pursuing data scientist and software engineer roles. My current work on MDO tooling at Bombardier builds on both areas.",
   },
   {
     q: "What is your proudest project?",
     emotion: "proud",
-    a: "My RAG fact-checking pipeline! Four stages, fine-tuned cross-encoders, 89.1% FEVER accuracy! PM-LSH straight from a research paper is a close second. Check the Resume tab!",
+    a: "My retrieval-augmented fact-verification pipeline. It is a four-stage system with fine-tuned cross-encoders that reached 89.1% accuracy on FEVER. A close second is my reimplementation of the PM-LSH nearest-neighbor algorithm from its original research paper. You can find details in the Resume section.",
   },
   {
     q: "Are you open to opportunities?",
     emotion: "excited",
-    a: "Always! Data scientist or software engineer, bring it on! Head to the Socials tab and send an email or a LinkedIn message. I reply fast!",
+    a: "Yes. I am open to data scientist and software engineer roles. The best way to reach me is through the Socials section, by email or LinkedIn, and I respond promptly.",
   },
   {
     q: "What do you do for fun?",
     emotion: "grimace",
-    a: "Clearly I build Persona-themed websites! Also the gym, gaming, and reimplementing algorithms from papers, because apparently that is my idea of relaxing!",
+    a: "Outside of work I enjoy the gym, gaming, and building projects like this site. I also like reimplementing algorithms from research papers to understand how they work.",
   },
   {
     q: "Any advice for future teammates?",
     emotion: "think",
-    a: "Write tests! And name your variables like a stranger will read them, because a stranger will. Usually it is you, three months later, very confused!",
+    a: "Write thorough tests, and name variables clearly enough that someone reading the code months later can follow it without difficulty.",
   },
 ];
 
@@ -376,7 +376,7 @@ export default function Talk({ src }) {
       `}</style>
 
       <div className="tk-overlay">
-        <div className={`tk-tag${mounted ? " mounted" : ""}`}>TALK TO <span>ME</span></div>
+        <div className={`tk-tag${mounted ? " mounted" : ""}`}>ASK ABOUT <span>ME</span></div>
 
         <div className="tk-questions">
           {QUESTIONS.map((item, i) => (

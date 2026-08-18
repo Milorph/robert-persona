@@ -135,7 +135,7 @@ const NAV_ITEMS = [
   { path: "github", label: "GitHub" },
   { path: "/socials", label: "Socials" },
   { path: "/journey", label: "Journey" },
-  { path: "/talk", label: "Ask" },
+  { path: "/talk", label: "Ask About Me" },
 ]
 
 function MobileNav() {

@@ -62,7 +62,7 @@ export default function P3Menu({ onNavigate }) {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 22px;
+          gap: 36px;
           pointer-events: all;
         }
 

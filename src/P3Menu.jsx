@@ -215,12 +215,12 @@ export default function P3Menu({ onNavigate }) {
         /* ===== MOBILE ===== */
         @media (max-width: 820px) {
           .p3-overlay { align-items: center; justify-content: center; }
-          .p3-menu { transform: scale(0.74); transform-origin: center; gap: 18px; padding: 24px; }
+          .p3-menu { transform: scale(0.78); transform-origin: center; gap: 46px; padding: 24px; }
           .p3-name-tag { font-size: 46px; top: 10px; left: 14px; }
           .p3-hint { display: none; }
         }
         @media (max-width: 460px) {
-          .p3-menu { transform: scale(0.58); }
+          .p3-menu { transform: scale(0.62); gap: 52px; }
           .p3-name-tag { font-size: 34px; }
         }
       `}</style>

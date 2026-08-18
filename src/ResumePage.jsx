@@ -38,7 +38,7 @@ const DETAILS = [
     bullets: [
       "- Primary focus on machine learning, targeting data scientist and software engineer roles.",
       "- Fine-tuned cross-encoders, built retrieval-augmented pipelines, and delivered clinical ML validation.",
-      "- Full-stack experience with React.js, Node.js, MySQL, MongoDB, Docker, and CI/CD.",
+      "- Full-stack experience with React.js, Next.js, Node.js, MySQL, MongoDB, and tooling such as Docker, Git, Jira, and Figma.",
     ],
   },
   {
@@ -60,17 +60,18 @@ const DETAILS = [
   {
     index: "04",
     title: "EXPERIENCE",
-    progress: "4",
+    progress: "5",
     rows: [
       { index: "01", title: "Bombardier: MDO Tools Developer", status: "Current" },
       { index: "02", title: "UVic: Teaching Assistant", status: "Completed" },
       { index: "03", title: "Bilimetrix: SWE Intern", status: "Completed" },
       { index: "04", title: "Amazon: SWE Intern", status: "Completed" },
+      { index: "05", title: "Smartfren: SWE Intern", status: "Completed" },
     ],
     bullets: [
       "- Current: building MDO tooling for next-generation aircraft with Bombardier Advanced Design in Canada.",
       "- Amazon: built a self-service tool that reduced Alexa onboarding from days to minutes.",
-      "- Bilimetrix: developed clinical ML validation pipelines meeting 96% accuracy targets.",
+      "- Smartfren: revamped a Next.js website with a team of five, cutting load time by 90% with lazy loading.",
     ],
   },
 ];

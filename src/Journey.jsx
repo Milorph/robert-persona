@@ -11,6 +11,13 @@ const CHAPTERS = [
   },
   {
     year: "2023",
+    title: "THE SMARTFREN ARC",
+    place: "Smartfren, Jakarta",
+    line: "Interned as a software engineer, revamping the company's Next.js website with a team of five and reducing page load time by 90% through lazy loading.",
+    status: "Completed",
+  },
+  {
+    year: "2023",
     title: "THE AMAZON ARC",
     place: "Amazon, Seattle",
     line: "Built an internal self-service tool that reduced Alexa onboarding from days to minutes.",

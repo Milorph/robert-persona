@@ -214,10 +214,10 @@ export default function AboutMe() {
         .sc-main-portrait-shell {
           position: absolute;
           top: 0;
-          right: -3vw;
+          right: -4vw;
           z-index: 13;
           pointer-events: none;
-          width: 43vw;
+          width: 38vw;
           height: 100vh;
           overflow: hidden;
           opacity: 0;
@@ -298,9 +298,9 @@ export default function AboutMe() {
         }
         .sc-reveal-lower-bar {
           position: absolute;
-          top: 58%;
-          right: 0;
-          width: 48%;
+          top: 54%;
+          left: 35%;
+          width: 44%;
           height: 20%;
           background: rgba(0, 0, 0, 0.92);
           clip-path: polygon(0 0, 100% 0, calc(100% - 22px) 100%, 0 100%);

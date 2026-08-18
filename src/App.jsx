@@ -93,16 +93,16 @@ function AnimatedRoutes() {
           <PageTransition variant="about"><AboutMe /></PageTransition>
         } />
         <Route path="/resume" element={
-          <PageTransition><ResumePage src={skillsBg} /></PageTransition>
+          <PageTransition variant="resume"><ResumePage src={skillsBg} /></PageTransition>
         } />
         <Route path="/socials" element={
           <PageTransition variant="socials"><Socials /></PageTransition>
         } />
         <Route path="/journey" element={
-          <PageTransition variant="resume"><Journey src={fuukaBg} /></PageTransition>
+          <PageTransition variant="journey"><Journey src={fuukaBg} /></PageTransition>
         } />
         <Route path="/talk" element={
-          <PageTransition variant="about"><Talk src={talkBg} /></PageTransition>
+          <PageTransition variant="talk"><Talk src={talkBg} /></PageTransition>
         } />
       </Routes>
     </AnimatePresence>

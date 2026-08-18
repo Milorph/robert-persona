@@ -75,7 +75,18 @@ export default function AboutMe() {
   const [active, setActive]   = useState(0);
   const [mounted, setMounted] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  const [closing, setClosing] = useState(false);
   const navigate = useNavigate();
+
+  // close the reveal with an outro animation before unmounting it
+  const closeReveal = () => {
+    if (closing) return;
+    setClosing(true);
+    setTimeout(() => {
+      setRevealed(false);
+      setClosing(false);
+    }, 180);
+  };
 
   useEffect(() => {
     const t = setTimeout(() => setMounted(true), 60);
@@ -89,14 +100,17 @@ export default function AboutMe() {
       if (e.key === "Enter") setRevealed(true);
       if (e.key === "ArrowRight") setRevealed(true);
       if (e.key === "ArrowLeft") {
-        if (revealed) setRevealed(false);
+        if (revealed) closeReveal();
         else navigate(-1);
       }
-      if (e.key === "Escape" || e.key === "Backspace") navigate(-1);
+      if (e.key === "Escape" || e.key === "Backspace") {
+        if (revealed) closeReveal();
+        else navigate(-1);
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [active, navigate, revealed]);
+  }, [active, navigate, revealed, closing]);
 
   return (
     <div id="menu-screen">
@@ -105,9 +119,9 @@ export default function AboutMe() {
         autoPlay loop muted playsInline
         style={{ objectPosition: "center top" }}
       />
-      {revealed && <div key={`dim-${active}`} className="sc-dim" />}
+      {revealed && <div key={`dim-${active}`} className={`sc-dim${closing ? " closing" : ""}`} />}
       {revealed && (
-        <div key={`panel-${active}`} className={`sc-reveal-panel${mounted ? " mounted" : ""}`}>
+        <div key={`panel-${active}`} className={`sc-reveal-panel${mounted ? " mounted" : ""}${closing ? " closing" : ""}`}>
           <div className="sc-reveal-upper-bar">
             {REVEAL_CONTENT[active].upper.map((line) => (
               <div className="sc-reveal-upper-line" key={line}>{line}</div>
@@ -117,7 +131,7 @@ export default function AboutMe() {
         </div>
       )}
       {revealed && (
-        <div key={`nav-${active}`} className="sc-right-nav">
+        <div key={`nav-${active}`} className={`sc-right-nav${closing ? " closing" : ""}`}>
           <span className="sc-nav-arrow left">◄</span>
           <span className="sc-nav-btn">LB</span>
           <span className="sc-nav-dot" />
@@ -126,7 +140,7 @@ export default function AboutMe() {
         </div>
       )}
       {revealed && (
-        <div key={`portrait-${active}`} className={`sc-main-portrait-shell${mounted ? " mounted" : ""}`}>
+        <div key={`portrait-${active}`} className={`sc-main-portrait-shell${mounted ? " mounted" : ""}${closing ? " closing" : ""}`}>
           <img
             className="sc-main-portrait"
             src={MAIN_IMAGES[active]}
@@ -200,6 +214,29 @@ export default function AboutMe() {
             filter: blur(0);
           }
         }
+
+        /* ---- closing (outro) animations ---- */
+        @keyframes sc-reveal-bar-out {
+          from { opacity: 0.92; transform: translateX(0) rotate(-20deg); }
+          to   { opacity: 0; transform: translateX(-170px) rotate(-20deg); }
+        }
+        @keyframes sc-portrait-out {
+          from { opacity: 0.96; transform: translateX(0) skewX(-8deg) scale(1); }
+          to   { opacity: 0; transform: translateX(90px) skewX(-8deg) scale(0.95); }
+        }
+        @keyframes sc-dim-out { from { opacity: 1; } to { opacity: 0; } }
+        @keyframes sc-nav-out {
+          from { opacity: 1; transform: scale(1) translateY(0); }
+          to   { opacity: 0; transform: scale(0.8) translateY(-8px); }
+        }
+        .sc-reveal-panel.closing {
+          animation: sc-reveal-bar-out 0.17s cubic-bezier(0.5, 0, 0.75, 0) forwards !important;
+        }
+        .sc-main-portrait-shell.closing {
+          animation: sc-portrait-out 0.17s cubic-bezier(0.5, 0, 0.75, 0) forwards !important;
+        }
+        .sc-dim.closing { animation: sc-dim-out 0.16s ease forwards; }
+        .sc-right-nav.closing { animation: sc-nav-out 0.15s ease forwards; }
 
         @keyframes sc-arrow-left {
           0%, 100% { transform: translateX(0); opacity: 1; }

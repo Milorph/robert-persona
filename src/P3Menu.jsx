@@ -215,7 +215,7 @@ export default function P3Menu({ onNavigate }) {
         /* ===== MOBILE ===== */
         @media (max-width: 820px) {
           .p3-overlay { align-items: center; justify-content: center; }
-          .p3-menu { transform: scale(0.7); transform-origin: center; gap: 36px; padding: 20px; }
+          .p3-menu { transform: scale(0.7); transform-origin: center; gap: 50px; padding: 20px; }
           .p3-row { margin: 0 !important; }
           /* No hover on touch: keep every item fully opaque and readable. */
           .p3-label-wrap { opacity: 1 !important; }
@@ -226,7 +226,7 @@ export default function P3Menu({ onNavigate }) {
           .p3-hint { display: none; }
         }
         @media (max-width: 400px) {
-          .p3-menu { transform: scale(0.6); gap: 40px; }
+          .p3-menu { transform: scale(0.6); gap: 54px; }
           .p3-name-tag { font-size: 34px; }
         }
       `}</style>

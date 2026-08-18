@@ -432,6 +432,38 @@ export default function ResumePage({ src }) {
           color: #edfaff;
         }
 
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .resume-entry-mask { display: none; }
+          .resume-overlay { position: relative; z-index: 20; height: auto; }
+          .resume-stack {
+            position: static;
+            width: 100%;
+            transform: none;
+            padding: 12vh 14px 8px;
+          }
+          .resume-list-tag { font-size: 50px; margin: 0 0 6px 6px; }
+          .resume-card { height: 88px; }
+          .resume-title { font-size: 32px; }
+          .resume-rank-number { font-size: 46px; }
+          .resume-rank-label { font-size: 20px; }
+          .resume-subtitle-bar { height: 30px; left: 58px; }
+          .resume-subtitle { font-size: 19px; }
+          .resume-detail-panel {
+            position: static;
+            width: auto;
+            min-height: 0;
+            margin: 6px 14px 44px;
+          }
+          .resume-detail-top { min-height: 76px; }
+          .resume-detail-top-index { font-size: 34px; }
+          .resume-detail-top-title { font-size: 28px; }
+          .resume-detail-top-progress { font-size: 32px; }
+          .resume-detail-row-title { font-size: 18px; }
+          .resume-detail-status { font-size: 18px; }
+          .resume-detail-bottom-title { font-size: 26px; }
+          .resume-detail-bullet { font-size: 18px; }
+        }
       `}</style>
 
       <div className="resume-overlay">

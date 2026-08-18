@@ -224,6 +224,40 @@ export default function Journey({ src }) {
           border-radius: 3px;
           padding: 1px 6px; font-size: 11px;
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .jr-overlay { position: relative; z-index: 3; height: auto; }
+          .jr-tag {
+            position: static;
+            font-size: 46px;
+            padding: 11vh 14px 6px;
+            transform: skewX(-6deg);
+          }
+          .jr-stack {
+            position: static;
+            width: 100%;
+            top: auto;
+            left: auto;
+            padding: 0 14px;
+          }
+          .jr-card { grid-template-columns: 82px 1fr auto; min-height: 62px; gap: 10px; }
+          .jr-year { font-size: 32px; }
+          .jr-title { font-size: 21px; }
+          .jr-place { font-size: 14px; }
+          .jr-status { font-size: 15px; padding: 5px 9px; }
+          .jr-detail {
+            position: static;
+            width: auto;
+            top: auto;
+            right: auto;
+            margin: 14px 14px 44px;
+          }
+          .jr-detail-year { font-size: 46px; }
+          .jr-detail-title { font-size: 25px; }
+          .jr-detail-line { font-size: 18px; }
+          .jr-footer { display: none; }
+        }
       `}</style>
 
       <div className="jr-overlay">

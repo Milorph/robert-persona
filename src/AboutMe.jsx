@@ -622,6 +622,73 @@ export default function AboutMe() {
           border-radius: 3px;
           padding: 1px 6px; font-size: 11px;
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .sc-root {
+            position: relative;
+            z-index: 3;
+            height: auto;
+            align-items: stretch;
+            justify-content: flex-start;
+            padding: 10vh 12px 46vh;
+            gap: 10px;
+          }
+          .sc-bar, .sc-bar-red { width: 100% !important; }
+          .sc-bar-outer { transform: none !important; }
+          .sc-bar { height: 74px; }
+          .sc-bar-outer.active .sc-bar,
+          .sc-bar-outer.active .sc-bar-red { height: 74px; }
+          .sc-bar-fill { display: none; }
+          .sc-char { display: none; }
+          .sc-role { font-size: 26px; }
+          .sc-label { font-size: 17px; text-align: center; }
+          .sc-bar-outer.active .sc-label { color: #8df6ff; }
+
+          /* reveal: full-width bottom sheet, no rotation, bars stay tappable */
+          .sc-dim { display: none; }
+          .sc-main-portrait-shell { display: none !important; }
+          .sc-right-nav { display: none !important; }
+          .sc-reveal-panel {
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            min-height: 40vh;
+            transform: none !important;
+            clip-path: none;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -8px 24px rgba(0,0,0,0.5);
+            padding: 16px 14px 20px;
+            animation: none !important;
+            z-index: 40;
+          }
+          .sc-reveal-panel::before { display: none; }
+          .sc-reveal-upper-bar {
+            position: static;
+            width: 100%;
+            height: auto;
+            clip-path: none;
+            padding: 14px;
+            gap: 8px;
+            border-radius: 10px;
+          }
+          .sc-reveal-upper-line { font-size: 18px; }
+          .sc-reveal-upper-line:first-child { font-size: 21px; }
+          .sc-reveal-lower-bar {
+            position: static;
+            width: 100%;
+            height: auto;
+            clip-path: none;
+            margin-top: 10px;
+            padding: 12px 14px;
+            font-size: 19px;
+            border-radius: 8px;
+          }
+          .sc-footer { display: none; }
+        }
       `}</style>
 
       <div className="sc-root" role="navigation">

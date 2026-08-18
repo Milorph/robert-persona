@@ -28,3 +28,23 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+/* ===== MOBILE: let tabs reflow and scroll, keep video as fixed backdrop ===== */
+@media (max-width: 820px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #menu-screen {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: visible;
+    padding-bottom: 86px;
+  }
+  #menu-screen > video {
+    position: fixed;
+    z-index: 0;
+    object-position: center center !important;
+  }
+}

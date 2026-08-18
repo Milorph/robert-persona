@@ -330,6 +330,49 @@ export default function Talk({ src }) {
           border-radius: 3px;
           padding: 1px 6px; font-size: 11px;
         }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 820px) {
+          .tk-overlay {
+            position: relative;
+            z-index: 3;
+            height: auto;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7vh 12px 34px;
+            gap: 14px;
+          }
+          .tk-tag { position: static; font-size: 40px; text-align: center; order: 0; }
+          .tk-sprite-wrap {
+            position: static;
+            width: 62vw;
+            height: auto;
+            max-height: 30vh;
+            transform: none !important;
+            order: 1;
+          }
+          .tk-sprite { max-height: 30vh; max-width: 100%; }
+          .tk-balloon { top: 11vh; right: 8vw; width: 58px; height: 58px; }
+          .tk-questions {
+            position: static;
+            width: 100%;
+            max-width: 520px;
+            top: auto;
+            left: auto;
+            order: 2;
+          }
+          .tk-q { font-size: 18px; padding: 10px 18px; }
+          .tk-dialog {
+            position: static;
+            width: 100%;
+            max-width: 560px;
+            min-height: 108px;
+            order: 3;
+          }
+          .tk-footer { display: none; }
+        }
       `}</style>
 
       <div className="tk-overlay">

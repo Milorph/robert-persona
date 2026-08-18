@@ -207,7 +207,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         @keyframes resume-entry-reveal {
           from { clip-path: circle(0 at 50% 50%); }
-          to { clip-path: circle(150vmax at 50% 50%); }
+          to { clip-path: circle(150cqmax at 50% 50%); }
         }
 
         .resume-overlay {
@@ -219,9 +219,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .resume-stack {
           position: absolute;
-          top: 9vh;
-          left: 2.8vw;
-          width: min(47vw, 720px);
+          top: 9cqh;
+          left: 2.8cqw;
+          width: min(47cqw, 720px);
           display: flex;
           flex-direction: column;
           gap: 10px;
@@ -388,10 +388,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .resume-detail-panel {
           position: absolute;
-          top: 9.5vh;
-          right: 4.5vw;
-          width: min(39vw, 620px);
-          min-height: 74vh;
+          top: 9.5cqh;
+          right: 4.5cqw;
+          width: min(39cqw, 620px);
+          min-height: 74cqh;
           z-index: 12;
           padding: 22px 24px 24px 24px;
           background: linear-gradient(180deg, rgba(15, 28, 105, 0.96) 0%, rgba(8, 16, 68, 0.97) 100%);
@@ -512,7 +512,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           color: #edfaff;
         }
 
-      `}),(0,Z.jsxs)(`div`,{className:`resume-overlay`,children:[(0,Z.jsxs)(`div`,{className:`resume-stack`,children:[(0,Z.jsx)(`div`,{className:`resume-list-tag${i?` mounted`:``}`,children:`LIST`}),jp.map((e,t)=>(0,Z.jsxs)(`div`,{className:`resume-card-wrap${n===t?` active`:``}${i?` mounted`:``}`,style:{transitionDelay:`${t*55}ms`},onMouseMove:()=>{r(t)},onClick:()=>{r(t)},children:[(0,Z.jsx)(`div`,{className:`resume-badge`,children:(0,Z.jsx)(`div`,{className:`resume-badge-text`,children:e.badge})}),(0,Z.jsxs)(`div`,{className:`resume-card`,children:[(0,Z.jsxs)(`div`,{className:`resume-card-inner`,children:[(0,Z.jsx)(`div`,{className:`resume-title`,children:e.title}),(0,Z.jsxs)(`div`,{className:`resume-rank`,children:[(0,Z.jsx)(`div`,{className:`resume-rank-label`,children:`RANK`}),(0,Z.jsx)(`div`,{className:`resume-rank-number`,children:e.rank})]})]}),(0,Z.jsx)(`div`,{className:`resume-subtitle-bar`,children:(0,Z.jsx)(`div`,{className:`resume-subtitle`,children:e.subtitle})})]})]},e.id))]}),(0,Z.jsxs)(`div`,{className:`resume-detail-panel`,children:[(0,Z.jsxs)(`div`,{className:`resume-detail-top`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-top-index`,children:Mp[n].index}),(0,Z.jsx)(`div`,{className:`resume-detail-top-title`,children:Mp[n].title}),(0,Z.jsx)(`div`,{className:`resume-detail-top-progress`,children:Mp[n].progress})]}),(0,Z.jsx)(`div`,{className:`resume-detail-list`,children:Mp[n].rows.map(e=>(0,Z.jsxs)(`div`,{className:`resume-detail-row`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-row-index`,children:e.index}),(0,Z.jsx)(`div`,{className:`resume-detail-row-title`,children:e.title}),(0,Z.jsx)(`div`,{className:`resume-detail-status`,children:e.status})]},e.index))}),(0,Z.jsxs)(`div`,{className:`resume-detail-bottom`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-bottom-title`,children:`DETAILS`}),(0,Z.jsx)(`div`,{className:`resume-detail-bullets`,children:Mp[n].bullets.map(e=>(0,Z.jsx)(`div`,{className:`resume-detail-bullet`,children:e},e))})]})]},n)]})]})}var Pp=[`#0d1a3a`,`#1a6aff`,`#7dd4fc`];function Fp(){return Pp.map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,inset:0,background:e,zIndex:999-t,originX:0,pointerEvents:`none`},initial:{scaleX:0},animate:{scaleX:[0,1,1,0]},transition:{duration:.45,delay:t*.05,times:[0,.4,.6,1],ease:[.76,0,.24,1]}},t))}function Ip(){return[{color:`#00184c`,top:`-12vh`,left:`-18vw`,width:`86vw`,delay:0},{color:`#53edff`,top:`24vh`,left:`-10vw`,width:`72vw`,delay:.05},{color:`#ffffff`,top:`58vh`,left:`-14vw`,width:`82vw`,delay:.1}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:e.top,left:e.left,width:e.width,height:`26vh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0 100%)`,transform:`rotate(-18deg)`,transformOrigin:`left center`,pointerEvents:`none`},initial:{x:`-60vw`,opacity:0},animate:{x:[`-60vw`,`1vw`,`0vw`],opacity:[1,1,0]},transition:{duration:.52,delay:e.delay,times:[0,.68,1],ease:[.22,1,.36,1]}},t))}function Lp(){return[{color:`#00184c`,left:`72vw`,width:`24vw`,delay:0},{color:`#00dff7`,left:`80vw`,width:`14vw`,delay:.06},{color:`#ffffff`,left:`88vw`,width:`8vw`,delay:.12}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:`-6vh`,left:e.left,width:e.width,height:`112vh`,background:e.color,zIndex:999-t,transform:`skewX(-16deg)`,transformOrigin:`top`,pointerEvents:`none`},initial:{y:`-130vh`,opacity:1},animate:{y:[`-130vh`,`0vh`,`0vh`,`130vh`]},transition:{duration:.56,delay:e.delay,times:[0,.42,.58,1],ease:[.76,0,.24,1]}},t))}function Rp({variant:e}){return e===`about`?(0,Z.jsx)(Ip,{}):e===`resume`?(0,Z.jsx)(zp,{}):e===`socials`?(0,Z.jsx)(Lp,{}):(0,Z.jsx)(Fp,{})}function zp(){return[{top:`14vh`,color:`#0f1760`,delay:0},{top:`31vh`,color:`#7ff6ff`,delay:.05},{top:`48vh`,color:`#ffffff`,delay:.1},{top:`65vh`,color:`#0f1760`,delay:.15}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,left:`-6vw`,top:e.top,width:`78vw`,height:`14vh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 97% 0, 100% 100%, 3% 100%)`,boxShadow:e.color===`#ffffff`?`10px 0 0 #d63232`:`none`,pointerEvents:`none`},initial:{x:`-90vw`,opacity:1},animate:{x:[`-90vw`,`2vw`,`0vw`,`135vw`],opacity:[1,1,1,0]},transition:{duration:.6,delay:e.delay,times:[0,.48,.7,1],ease:[.76,0,.24,1]}},t))}function Bp({children:e,variant:t=`default`}){let n=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Sp.div,{style:{position:`relative`},children:[(0,Z.jsx)(Rp,{variant:t}),(0,Z.jsx)(Sp.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.2,delay:.18},children:e})]},n.pathname)})}var Vp=`/robert-persona/assets/char1-CsH_ZuNY.png`,Hp=`/robert-persona/assets/char2-Gce5wDiS.png`,Up=`/robert-persona/assets/char3-DAaUGPoZ.png`,Wp=`/robert-persona/assets/p5red-SIxGFkab.webm`,Gp=`data:image/svg+xml,%3csvg%20fill='%23181717'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGitHub%3c/title%3e%3cpath%20d='M12%20.297c-6.63%200-12%205.373-12%2012%200%205.303%203.438%209.8%208.205%2011.385.6.113.82-.258.82-.577%200-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422%2018.07%203.633%2017.7%203.633%2017.7c-1.087-.744.084-.729.084-.729%201.205.084%201.838%201.236%201.838%201.236%201.07%201.835%202.809%201.305%203.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93%200-1.31.465-2.38%201.235-3.22-.135-.303-.54-1.523.105-3.176%200%200%201.005-.322%203.3%201.23.96-.267%201.98-.399%203-.405%201.02.006%202.04.138%203%20.405%202.28-1.552%203.285-1.23%203.285-1.23.645%201.653.24%202.873.12%203.176.765.84%201.23%201.91%201.23%203.22%200%204.61-2.805%205.625-5.475%205.92.42.36.81%201.096.81%202.22%200%201.606-.015%202.896-.015%203.286%200%20.315.21.69.825.57C20.565%2022.092%2024%2017.592%2024%2012.297c0-6.627-5.373-12-12-12'/%3e%3c/svg%3e`,Kp=`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEu0lEQVR4nO3dTWgUdxzG8cfEJCapmhgDmkZbkoCRxoqi9I1K2oOClHqoIiJ40KDgoUKhePMgUg9FQbRYCm2xpYceSm0PbS4tbcHWixS0Fa0VozHRbWo07y+7m5WVWobN7O5/dmbkP/M8n6OMuyG/7/xndmZcAREREWE0J+w3qNn7Sybs94i78Y82hDanwF9YA49WEIG9kAYfzRB8v4AGH+0Qyvy8sYZvBz9zKKkcDT4+q4HnFUDDt5vX+XgKQMOPBi9zMg5Aw48W03kZBaDhR5PJ3Hx9CpDoKxqA9v5oKza/ggFo+PFQaI46BJDLG4D2/njJN0+tAORcA9DeH09uc9UKQE4BkFMA5GYFoON/vOXOVysAOQVATgGQUwDkFAA5BUBOAZCbC0t0bViKEzvbjLbd+sGf+P7iYOg/EwOtAOQUADkFQE4BkFMA5BQAOQVATgGQm/VvyfVACNd3CGgFIKcAyCkAcgqAnDV3A223vKEKm59vwEttC/BcUy2WLKzEU/PKkZ7JYHgihRv/TuLS7TH8fOUBui8NYnx6BlFgzaeAsG4HH9y8HIe2PFN0u0Nf9+BYd++sP39tZR3e2dSM11fWw9ToZBpfnE/gWPdt9N2fgs2fArQC5PF0fRWO72jFG6sb4FV2ZdjX2YRdryzB4bM9OPlDHzKWfmOyAnDR2V6HM13tWDy/An5UV5Th6LYWrH12Pro+uYrUjH0V6CQwx1vrGvHNgQ7fw3fatr4R729vhY0UgMObaxrw6Z4VmFsW/Lez7+1cipfbFsA2CuA/q5fV4uPd7SgPYfiPHd/Rhjmh/w8N3igAx9JfUxnur2NVcy1eaLFrFdBJYBG/XR/G5+cS+PXvIfQ/mH70uX/Zoips6liEAxub0VRXCa+hnb8+DFsogDwGRpLY/9lf+M7lesO1xASuJfpw5txdnH27Ay+2mu/VGzvq8e6XsIYOAS5u3pvEq+/97jp8p5HJNLac+ONREKZaGqtDP9R4Yc9PYonpVAZbT11G76DZFbzRqTSOfHvT+PWz55jZi0y2UAA5Tv/Yh8v9Y/DiqwsDSAxPG2+fvY9gCwXgkL1c++FP/Sjl713oGTXefmG1PadeCsDhyp1x3LpX2s2bGwPm5wE1VeWwhQJwuNhrvhfn+mckabxtRbk9V4MUgEP2nn6phsZTxtuGcam5VArA4e6Q+YlcrrGptPG2Nl0OVgAO98fM92K3j49RpAByLuyUKplWAJE3kSz9Ob4ZWx/5KUIrgEMyFY0HOYOkABwsfGIrdArAIQO+AhQAOQVATgGQUwDkFAA5BUBOAZBTAOQUADkFQE4BkFMA5BQAOQVATgGQUwDkFAA5BUDOmi+KlCdHXxcv/9MhgJwCIKcAyCkAcgqAnAIgpwDIKQByCoCcAiCnAMgpAHIKgJwCIKcAyJUVelhA4id3vloByCkAcgqAnGsAOg+IJ7e5agUglzcArQLxkm+eWgHIFQxAq0A8FJpj0RVAEURbsfnpEEDOKACtAtFkMjfjFUARRIvpvDwdAhRBNHiZk+dzAEVgN6/z8XXrV98lYI9Sd0xfnwK0GtjBzxwCe/hDq8GTF8QOGPjTPwohfEGuvKE//qUg/NOhVkREELyHTIJU+wzrswwAAAAASUVORK5CYII=`,qp=`data:image/svg+xml,%3csvg%20fill='%23EA4335'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGmail%3c/title%3e%3cpath%20d='M24%205.457v13.909c0%20.904-.732%201.636-1.636%201.636h-3.819V11.73L12%2016.64l-6.545-4.91v9.273H1.636A1.636%201.636%200%200%201%200%2019.366V5.457c0-2.023%202.309-3.178%203.927-1.964L5.455%204.64%2012%209.548l6.545-4.91%201.528-1.145C21.69%202.28%2024%203.434%2024%205.457z'/%3e%3c/svg%3e`,Jp=[Vp,Hp,Up],Yp=[[`NLI`,`PY`],[`PM-LSH`,`PY`],[`neural-network-breast-cancer`,`PY`],[`Network-File-System`,`C++`],[`Facial-Attendance-Platform`,`PY`],[`Rocket-Bookmark-Tool`,`RS`],[`Cartify`,`JS`],[`RDT-Protocol`,`PY`],[`DV-Router`,`PY`],[`Ocean-data-pipeline`,`PY`],[`fair_share`,`TS`],[`fair-share-azure`,`HTML`],[`vendor-network`,`HCL`],[`vendor-data`,`TS`],[`vendor-twitter`,`GIT`],[`E-Commerce-Web-Application`,`PHP`],[`FlutterWorkout`,`DART`],[`FightClass`,`C#`],[`Fighter-Hierarchy`,`C#`],[`Aerial-Ascent`,`C`],[`OOP-NOVA`,`C++`],[`MyShell`,`C++`],[`Covid-19-Data`,`C++`],[`Road-Synchronization`,`C++`],[`Sudoku-Solver`,`JAVA`],[`Trivia-Game`,`C++`],[`HTML-Manager`,`JAVA`],[`Treasure-Hunt`,`C++`],[`neetcode-submissions`,`PY`],[`fall25-csc-bioinf`,`NB`],[`personal-web`,`JS`],[`csc503`,`PY`],[`597proj`,`PY`],[`502_proj`,`PY`],[`final_proj`,`PY`],[`Milorph`,`GIT`]],Xp=[{text:`CODE!`,color:`#e8c100`,bg:`rgba(232,193,0,0.12)`,border:`rgba(232,193,0,0.5)`},{text:`WORK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`},{text:`TALK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`}],Zp=[{id:`github`,label:`GITHUB`,handle:`@Milorph`,href:`https://github.com/Milorph`,icon:`⌨`,barIcon:Gp,newBars:[0,1],counts:Yp.map(([,e])=>e),links:Yp.map(([e])=>`github.com/Milorph/${e}`),stats:[{tag:`REP`,value:`36`,color:`#6ee8ff`},{tag:`LNG`,value:`10+`,color:`#b3f0ff`}]},{id:`linkedin`,label:`LINKEDIN`,handle:`in/robert-widjaja`,href:`https://www.linkedin.com/in/robert-widjaja/`,icon:`💼`,barIcon:Kp,newBars:[0],counts:[`CA`],links:[`linkedin.com/in/robert-widjaja`],stats:[{tag:`ROLE`,value:`SWE`,color:`#4a8fff`},{tag:`LOC`,value:`CA`,color:`#8ab8ff`}]},{id:`email`,label:`EMAIL`,handle:`robertwinstonwidjaja1@gmail.com`,href:`mailto:robertwinstonwidjaja1@gmail.com`,icon:`✉`,barIcon:qp,newBars:[0],counts:[`24H`],links:[`mail.google.com/mail/?view=cm&fs=1&to=robertwinstonwidjaja1@gmail.com`],stats:[{tag:`INB`,value:`OPEN`,color:`#34d399`},{tag:`RES`,value:`24H`,color:`#a7f3d0`}]}],Qp=5;function $p(){let[e,t]=(0,w.useState)(0),[n,r]=(0,w.useState)(!1),[i,a]=(0,w.useState)(0),[o,s]=(0,w.useState)(0),[c,l]=(0,w.useState)(`left`),u=pt(),d=Math.max(1,Math.ceil(Zp[e].links.length/Qp)),f=Zp[e].links.slice(o*Qp,(o+1)*Qp),p=Zp[e].counts.slice(o*Qp,(o+1)*Qp);(0,w.useEffect)(()=>{let e=setTimeout(()=>r(!0),60);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{s(0),a(0)},[e]);let m=()=>{s(e=>(e-1+d)%d),a(0)},h=()=>{s(e=>(e+1)%d),a(0)};return(0,w.useEffect)(()=>{let n=n=>{if(n.key===`q`||n.key===`Q`){d>1&&m();return}if(n.key===`e`||n.key===`E`){d>1&&h();return}if(c===`left`)n.key===`ArrowUp`&&t(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&t(e=>Math.min(Zp.length-1,e+1)),n.key===`ArrowRight`&&(l(`right`),a(0)),n.key===`Enter`&&window.open(Zp[e].href,`_blank`);else{let e=f.length;n.key===`ArrowUp`&&a(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&a(t=>Math.min(e-1,t+1)),n.key===`ArrowLeft`&&l(`left`),n.key===`Enter`&&window.open(`https://`+f[i],`_blank`)}(n.key===`ArrowLeft`&&c===`left`||n.key===`Escape`||n.key===`Backspace`)&&u(-1)};return window.addEventListener(`keydown`,n),()=>window.removeEventListener(`keydown`,n)},[e,u,c,o,d,f,i]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Wp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(`style`,{children:`
+      `}),(0,Z.jsxs)(`div`,{className:`resume-overlay`,children:[(0,Z.jsxs)(`div`,{className:`resume-stack`,children:[(0,Z.jsx)(`div`,{className:`resume-list-tag${i?` mounted`:``}`,children:`LIST`}),jp.map((e,t)=>(0,Z.jsxs)(`div`,{className:`resume-card-wrap${n===t?` active`:``}${i?` mounted`:``}`,style:{transitionDelay:`${t*55}ms`},onMouseMove:()=>{r(t)},onClick:()=>{r(t)},children:[(0,Z.jsx)(`div`,{className:`resume-badge`,children:(0,Z.jsx)(`div`,{className:`resume-badge-text`,children:e.badge})}),(0,Z.jsxs)(`div`,{className:`resume-card`,children:[(0,Z.jsxs)(`div`,{className:`resume-card-inner`,children:[(0,Z.jsx)(`div`,{className:`resume-title`,children:e.title}),(0,Z.jsxs)(`div`,{className:`resume-rank`,children:[(0,Z.jsx)(`div`,{className:`resume-rank-label`,children:`RANK`}),(0,Z.jsx)(`div`,{className:`resume-rank-number`,children:e.rank})]})]}),(0,Z.jsx)(`div`,{className:`resume-subtitle-bar`,children:(0,Z.jsx)(`div`,{className:`resume-subtitle`,children:e.subtitle})})]})]},e.id))]}),(0,Z.jsxs)(`div`,{className:`resume-detail-panel`,children:[(0,Z.jsxs)(`div`,{className:`resume-detail-top`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-top-index`,children:Mp[n].index}),(0,Z.jsx)(`div`,{className:`resume-detail-top-title`,children:Mp[n].title}),(0,Z.jsx)(`div`,{className:`resume-detail-top-progress`,children:Mp[n].progress})]}),(0,Z.jsx)(`div`,{className:`resume-detail-list`,children:Mp[n].rows.map(e=>(0,Z.jsxs)(`div`,{className:`resume-detail-row`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-row-index`,children:e.index}),(0,Z.jsx)(`div`,{className:`resume-detail-row-title`,children:e.title}),(0,Z.jsx)(`div`,{className:`resume-detail-status`,children:e.status})]},e.index))}),(0,Z.jsxs)(`div`,{className:`resume-detail-bottom`,children:[(0,Z.jsx)(`div`,{className:`resume-detail-bottom-title`,children:`DETAILS`}),(0,Z.jsx)(`div`,{className:`resume-detail-bullets`,children:Mp[n].bullets.map(e=>(0,Z.jsx)(`div`,{className:`resume-detail-bullet`,children:e},e))})]})]},n)]})]})}var Pp=[`#0d1a3a`,`#1a6aff`,`#7dd4fc`];function Fp(){return Pp.map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,inset:0,background:e,zIndex:999-t,originX:0,pointerEvents:`none`},initial:{scaleX:0},animate:{scaleX:[0,1,1,0]},transition:{duration:.45,delay:t*.05,times:[0,.4,.6,1],ease:[.76,0,.24,1]}},t))}function Ip(){return[{color:`#00184c`,top:`-12cqh`,left:`-18cqw`,width:`86cqw`,delay:0},{color:`#53edff`,top:`24cqh`,left:`-10cqw`,width:`72cqw`,delay:.05},{color:`#ffffff`,top:`58cqh`,left:`-14cqw`,width:`82cqw`,delay:.1}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:e.top,left:e.left,width:e.width,height:`26cqh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0 100%)`,transform:`rotate(-18deg)`,transformOrigin:`left center`,pointerEvents:`none`},initial:{x:`-60cqw`,opacity:0},animate:{x:[`-60cqw`,`1cqw`,`0cqw`],opacity:[1,1,0]},transition:{duration:.52,delay:e.delay,times:[0,.68,1],ease:[.22,1,.36,1]}},t))}function Lp(){return[{color:`#00184c`,left:`72cqw`,width:`24cqw`,delay:0},{color:`#00dff7`,left:`80cqw`,width:`14cqw`,delay:.06},{color:`#ffffff`,left:`88cqw`,width:`8cqw`,delay:.12}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,top:`-6cqh`,left:e.left,width:e.width,height:`112cqh`,background:e.color,zIndex:999-t,transform:`skewX(-16deg)`,transformOrigin:`top`,pointerEvents:`none`},initial:{y:`-130cqh`,opacity:1},animate:{y:[`-130cqh`,`0cqh`,`0cqh`,`130cqh`]},transition:{duration:.56,delay:e.delay,times:[0,.42,.58,1],ease:[.76,0,.24,1]}},t))}function Rp({variant:e}){return e===`about`?(0,Z.jsx)(Ip,{}):e===`resume`?(0,Z.jsx)(zp,{}):e===`socials`?(0,Z.jsx)(Lp,{}):(0,Z.jsx)(Fp,{})}function zp(){return[{top:`14cqh`,color:`#0f1760`,delay:0},{top:`31cqh`,color:`#7ff6ff`,delay:.05},{top:`48cqh`,color:`#ffffff`,delay:.1},{top:`65cqh`,color:`#0f1760`,delay:.15}].map((e,t)=>(0,Z.jsx)(Sp.div,{style:{position:`fixed`,left:`-6cqw`,top:e.top,width:`78cqw`,height:`14cqh`,background:e.color,zIndex:999-t,clipPath:`polygon(0 0, 97% 0, 100% 100%, 3% 100%)`,boxShadow:e.color===`#ffffff`?`10px 0 0 #d63232`:`none`,pointerEvents:`none`},initial:{x:`-90cqw`,opacity:1},animate:{x:[`-90cqw`,`2cqw`,`0cqw`,`135cqw`],opacity:[1,1,1,0]},transition:{duration:.6,delay:e.delay,times:[0,.48,.7,1],ease:[.76,0,.24,1]}},t))}function Bp({children:e,variant:t=`default`}){let n=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Sp.div,{style:{position:`relative`},children:[(0,Z.jsx)(Rp,{variant:t}),(0,Z.jsx)(Sp.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.2,delay:.18},children:e})]},n.pathname)})}var Vp=`/robert-persona/assets/char1-CsH_ZuNY.png`,Hp=`/robert-persona/assets/char2-Gce5wDiS.png`,Up=`/robert-persona/assets/char3-DAaUGPoZ.png`,Wp=`/robert-persona/assets/p5red-SIxGFkab.webm`,Gp=`data:image/svg+xml,%3csvg%20fill='%23181717'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGitHub%3c/title%3e%3cpath%20d='M12%20.297c-6.63%200-12%205.373-12%2012%200%205.303%203.438%209.8%208.205%2011.385.6.113.82-.258.82-.577%200-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422%2018.07%203.633%2017.7%203.633%2017.7c-1.087-.744.084-.729.084-.729%201.205.084%201.838%201.236%201.838%201.236%201.07%201.835%202.809%201.305%203.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93%200-1.31.465-2.38%201.235-3.22-.135-.303-.54-1.523.105-3.176%200%200%201.005-.322%203.3%201.23.96-.267%201.98-.399%203-.405%201.02.006%202.04.138%203%20.405%202.28-1.552%203.285-1.23%203.285-1.23.645%201.653.24%202.873.12%203.176.765.84%201.23%201.91%201.23%203.22%200%204.61-2.805%205.625-5.475%205.92.42.36.81%201.096.81%202.22%200%201.606-.015%202.896-.015%203.286%200%20.315.21.69.825.57C20.565%2022.092%2024%2017.592%2024%2012.297c0-6.627-5.373-12-12-12'/%3e%3c/svg%3e`,Kp=`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEu0lEQVR4nO3dTWgUdxzG8cfEJCapmhgDmkZbkoCRxoqi9I1K2oOClHqoIiJ40KDgoUKhePMgUg9FQbRYCm2xpYceSm0PbS4tbcHWixS0Fa0VozHRbWo07y+7m5WVWobN7O5/dmbkP/M8n6OMuyG/7/xndmZcAREREWE0J+w3qNn7Sybs94i78Y82hDanwF9YA49WEIG9kAYfzRB8v4AGH+0Qyvy8sYZvBz9zKKkcDT4+q4HnFUDDt5vX+XgKQMOPBi9zMg5Aw48W03kZBaDhR5PJ3Hx9CpDoKxqA9v5oKza/ggFo+PFQaI46BJDLG4D2/njJN0+tAORcA9DeH09uc9UKQE4BkFMA5GYFoON/vOXOVysAOQVATgGQUwDkFAA5BUBOAZCbC0t0bViKEzvbjLbd+sGf+P7iYOg/EwOtAOQUADkFQE4BkFMA5BQAOQVATgGQm/VvyfVACNd3CGgFIKcAyCkAcgqAnDV3A223vKEKm59vwEttC/BcUy2WLKzEU/PKkZ7JYHgihRv/TuLS7TH8fOUBui8NYnx6BlFgzaeAsG4HH9y8HIe2PFN0u0Nf9+BYd++sP39tZR3e2dSM11fWw9ToZBpfnE/gWPdt9N2fgs2fArQC5PF0fRWO72jFG6sb4FV2ZdjX2YRdryzB4bM9OPlDHzKWfmOyAnDR2V6HM13tWDy/An5UV5Th6LYWrH12Pro+uYrUjH0V6CQwx1vrGvHNgQ7fw3fatr4R729vhY0UgMObaxrw6Z4VmFsW/Lez7+1cipfbFsA2CuA/q5fV4uPd7SgPYfiPHd/Rhjmh/w8N3igAx9JfUxnur2NVcy1eaLFrFdBJYBG/XR/G5+cS+PXvIfQ/mH70uX/Zoips6liEAxub0VRXCa+hnb8+DFsogDwGRpLY/9lf+M7lesO1xASuJfpw5txdnH27Ay+2mu/VGzvq8e6XsIYOAS5u3pvEq+/97jp8p5HJNLac+ONREKZaGqtDP9R4Yc9PYonpVAZbT11G76DZFbzRqTSOfHvT+PWz55jZi0y2UAA5Tv/Yh8v9Y/DiqwsDSAxPG2+fvY9gCwXgkL1c++FP/Sjl713oGTXefmG1PadeCsDhyp1x3LpX2s2bGwPm5wE1VeWwhQJwuNhrvhfn+mckabxtRbk9V4MUgEP2nn6phsZTxtuGcam5VArA4e6Q+YlcrrGptPG2Nl0OVgAO98fM92K3j49RpAByLuyUKplWAJE3kSz9Ob4ZWx/5KUIrgEMyFY0HOYOkABwsfGIrdArAIQO+AhQAOQVATgGQUwDkFAA5BUBOAZBTAOQUADkFQE4BkFMA5BQAOQVATgGQUwDkFAA5BUDOmi+KlCdHXxcv/9MhgJwCIKcAyCkAcgqAnAIgpwDIKQByCoCcAiCnAMgpAHIKgJwCIKcAyJUVelhA4id3vloByCkAcgqAnGsAOg+IJ7e5agUglzcArQLxkm+eWgHIFQxAq0A8FJpj0RVAEURbsfnpEEDOKACtAtFkMjfjFUARRIvpvDwdAhRBNHiZk+dzAEVgN6/z8XXrV98lYI9Sd0xfnwK0GtjBzxwCe/hDq8GTF8QOGPjTPwohfEGuvKE//qUg/NOhVkREELyHTIJU+wzrswwAAAAASUVORK5CYII=`,qp=`data:image/svg+xml,%3csvg%20fill='%23EA4335'%20role='img'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eGmail%3c/title%3e%3cpath%20d='M24%205.457v13.909c0%20.904-.732%201.636-1.636%201.636h-3.819V11.73L12%2016.64l-6.545-4.91v9.273H1.636A1.636%201.636%200%200%201%200%2019.366V5.457c0-2.023%202.309-3.178%203.927-1.964L5.455%204.64%2012%209.548l6.545-4.91%201.528-1.145C21.69%202.28%2024%203.434%2024%205.457z'/%3e%3c/svg%3e`,Jp=[Vp,Hp,Up],Yp=[[`NLI`,`PY`],[`PM-LSH`,`PY`],[`neural-network-breast-cancer`,`PY`],[`Network-File-System`,`C++`],[`Facial-Attendance-Platform`,`PY`],[`Rocket-Bookmark-Tool`,`RS`],[`Cartify`,`JS`],[`RDT-Protocol`,`PY`],[`DV-Router`,`PY`],[`Ocean-data-pipeline`,`PY`],[`fair_share`,`TS`],[`fair-share-azure`,`HTML`],[`vendor-network`,`HCL`],[`vendor-data`,`TS`],[`vendor-twitter`,`GIT`],[`E-Commerce-Web-Application`,`PHP`],[`FlutterWorkout`,`DART`],[`FightClass`,`C#`],[`Fighter-Hierarchy`,`C#`],[`Aerial-Ascent`,`C`],[`OOP-NOVA`,`C++`],[`MyShell`,`C++`],[`Covid-19-Data`,`C++`],[`Road-Synchronization`,`C++`],[`Sudoku-Solver`,`JAVA`],[`Trivia-Game`,`C++`],[`HTML-Manager`,`JAVA`],[`Treasure-Hunt`,`C++`],[`neetcode-submissions`,`PY`],[`fall25-csc-bioinf`,`NB`],[`personal-web`,`JS`],[`csc503`,`PY`],[`597proj`,`PY`],[`502_proj`,`PY`],[`final_proj`,`PY`],[`Milorph`,`GIT`]],Xp=[{text:`CODE!`,color:`#e8c100`,bg:`rgba(232,193,0,0.12)`,border:`rgba(232,193,0,0.5)`},{text:`WORK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`},{text:`TALK!`,color:`#4a8fff`,bg:`rgba(74,143,255,0.12)`,border:`rgba(74,143,255,0.5)`}],Zp=[{id:`github`,label:`GITHUB`,handle:`@Milorph`,href:`https://github.com/Milorph`,icon:`⌨`,barIcon:Gp,newBars:[0,1],counts:Yp.map(([,e])=>e),links:Yp.map(([e])=>`github.com/Milorph/${e}`),stats:[{tag:`REP`,value:`36`,color:`#6ee8ff`},{tag:`LNG`,value:`10+`,color:`#b3f0ff`}]},{id:`linkedin`,label:`LINKEDIN`,handle:`in/robert-widjaja`,href:`https://www.linkedin.com/in/robert-widjaja/`,icon:`💼`,barIcon:Kp,newBars:[0],counts:[`CA`],links:[`linkedin.com/in/robert-widjaja`],stats:[{tag:`ROLE`,value:`SWE`,color:`#4a8fff`},{tag:`LOC`,value:`CA`,color:`#8ab8ff`}]},{id:`email`,label:`EMAIL`,handle:`robertwinstonwidjaja1@gmail.com`,href:`mailto:robertwinstonwidjaja1@gmail.com`,icon:`✉`,barIcon:qp,newBars:[0],counts:[`24H`],links:[`mail.google.com/mail/?view=cm&fs=1&to=robertwinstonwidjaja1@gmail.com`],stats:[{tag:`INB`,value:`OPEN`,color:`#34d399`},{tag:`RES`,value:`24H`,color:`#a7f3d0`}]}],Qp=5;function $p(){let[e,t]=(0,w.useState)(0),[n,r]=(0,w.useState)(!1),[i,a]=(0,w.useState)(0),[o,s]=(0,w.useState)(0),[c,l]=(0,w.useState)(`left`),u=pt(),d=Math.max(1,Math.ceil(Zp[e].links.length/Qp)),f=Zp[e].links.slice(o*Qp,(o+1)*Qp),p=Zp[e].counts.slice(o*Qp,(o+1)*Qp);(0,w.useEffect)(()=>{let e=setTimeout(()=>r(!0),60);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{s(0),a(0)},[e]);let m=()=>{s(e=>(e-1+d)%d),a(0)},h=()=>{s(e=>(e+1)%d),a(0)};return(0,w.useEffect)(()=>{let n=n=>{if(n.key===`q`||n.key===`Q`){d>1&&m();return}if(n.key===`e`||n.key===`E`){d>1&&h();return}if(c===`left`)n.key===`ArrowUp`&&t(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&t(e=>Math.min(Zp.length-1,e+1)),n.key===`ArrowRight`&&(l(`right`),a(0)),n.key===`Enter`&&window.open(Zp[e].href,`_blank`);else{let e=f.length;n.key===`ArrowUp`&&a(e=>Math.max(0,e-1)),n.key===`ArrowDown`&&a(t=>Math.min(e-1,t+1)),n.key===`ArrowLeft`&&l(`left`),n.key===`Enter`&&window.open(`https://`+f[i],`_blank`)}(n.key===`ArrowLeft`&&c===`left`||n.key===`Escape`||n.key===`Backspace`)&&u(-1)};return window.addEventListener(`keydown`,n),()=>window.removeEventListener(`keydown`,n)},[e,u,c,o,d,f,i]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Wp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(`style`,{children:`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,700;1,700&display=swap');
 
         .sc-root {
@@ -531,7 +531,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ── Each bar ── */
         .sc-bar {
           position: relative;
-          width: 45vw;
+          width: 45cqw;
           height: 64px;
           transition: height 0.3s cubic-bezier(0.22,1,0.36,1);
           background: #111;
@@ -560,7 +560,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .sc-bar-red {
           position: absolute;
           top: 0; left: 0;
-          width: 45vw;
+          width: 45cqw;
           height: 64px;
           background: #c4001a;
           clip-path: polygon(50% 0, 100% 0, 100% 100%, calc(50% - 10px) 100%);
@@ -1036,11 +1036,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .sc-main-portrait-shell {
           position: absolute;
           top: 0;
-          right: -3vw;
+          right: -3cqw;
           z-index: 13;
           pointer-events: none;
-          width: 43vw;
-          height: 100vh;
+          width: 43cqw;
+          height: 100cqh;
           overflow: hidden;
           opacity: 0;
           transform: translateX(24px) skewX(-8deg) scale(0.98);
@@ -1054,10 +1054,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .sc-reveal-panel {
           position: absolute;
-          top: 44vh;
-          left: -6vw;
-          width: 88vw;
-          height: 60vh;
+          top: 44cqh;
+          left: -6cqw;
+          width: 88cqw;
+          height: 60cqh;
           z-index: 12;
           pointer-events: none;
           background:
@@ -1146,8 +1146,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .sc-right-nav {
           position: absolute;
-          top: 10vh;
-          left: 6vw;
+          top: 10cqh;
+          left: 6cqw;
           display: flex;
           align-items: center;
           gap: 6px;
@@ -1201,7 +1201,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ── Each bar ── */
         .sc-bar {
           position: relative;
-          width: 45vw;
+          width: 45cqw;
           height: 64px;
           transition: height 0.3s cubic-bezier(0.22,1,0.36,1);
           background: #111;
@@ -1230,7 +1230,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .sc-bar-red {
           position: absolute;
           top: 0; left: 0;
-          width: 45vw;
+          width: 45cqw;
           height: 64px;
           background: #c4001a;
           clip-path: polygon(50% 0, 100% 0, 100% 100%, calc(50% - 10px) 100%);
@@ -1453,8 +1453,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .jr-tag {
           position: absolute;
-          top: 5vh;
-          left: 3vw;
+          top: 5cqh;
+          left: 3cqw;
           font-family: 'Anton', sans-serif;
           font-style: italic;
           font-size: 84px;
@@ -1474,9 +1474,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .jr-stack {
           position: absolute;
-          top: 22vh;
-          left: 3vw;
-          width: min(52vw, 760px);
+          top: 22cqh;
+          left: 3cqw;
+          width: min(52cqw, 760px);
           display: flex;
           flex-direction: column;
           gap: 12px;
@@ -1550,9 +1550,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .jr-detail {
           position: absolute;
-          top: 24vh;
-          right: 4vw;
-          width: min(34vw, 520px);
+          top: 24cqh;
+          right: 4cqw;
+          width: min(34cqw, 520px);
           z-index: 12;
           padding: 26px 28px;
           background: linear-gradient(180deg, rgba(15, 28, 105, 0.96) 0%, rgba(8, 16, 68, 0.97) 100%);
@@ -1611,7 +1611,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         .tk-tag {
           position: absolute;
-          top: 5vh; left: 3vw;
+          top: 5cqh; left: 3cqw;
           font-family: 'Anton', sans-serif;
           font-style: italic;
           font-size: 76px;
@@ -1628,10 +1628,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- sprite ---- */
         .tk-sprite-wrap {
           position: absolute;
-          right: 7vw;
+          right: 7cqw;
           bottom: 0;
-          height: 66vh;
-          width: 32vw;
+          height: 66cqh;
+          width: 32cqw;
           display: flex;
           align-items: flex-end;
           justify-content: center;
@@ -1667,8 +1667,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- emotion balloon ---- */
         .tk-balloon {
           position: absolute;
-          top: 4vh;
-          right: 6vw;
+          top: 4cqh;
+          right: 6cqw;
           width: 84px;
           height: 84px;
           background: #ffffff;
@@ -1712,9 +1712,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- questions ---- */
         .tk-questions {
           position: absolute;
-          top: 18vh;
-          left: 3vw;
-          width: min(44vw, 640px);
+          top: 18cqh;
+          left: 3cqw;
+          width: min(44cqw, 640px);
           display: flex;
           flex-direction: column;
           gap: 10px;
@@ -1752,9 +1752,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ---- dialogue box ---- */
         .tk-dialog {
           position: absolute;
-          left: 3vw;
-          bottom: 5vh;
-          width: min(58vw, 900px);
+          left: 3cqw;
+          bottom: 5cqh;
+          width: min(58cqw, 900px);
           min-height: 148px;
           z-index: 13;
           background: rgba(4, 8, 26, 0.92);
@@ -1846,4 +1846,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .bgm-toggle .bgm-state { color: #8df6ff; }
         .bgm-toggle:hover .bgm-state { color: #06133b; }
-      `}),(0,Z.jsx)(`audio`,{ref:e,src:Dp,loop:!0}),(0,Z.jsxs)(`button`,{className:`bgm-toggle`,onClick:()=>{let r=e.current;t?(r.pause(),n(!1)):r.play().then(()=>n(!0)).catch(()=>{})},children:[`SOUND `,(0,Z.jsx)(`span`,{className:`bgm-state`,children:t?`ON`:`OFF`})]})]})}function vm(){let e=pt();return(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Cp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(Ap,{onNavigate:t=>{t===`github`?window.open(`https://github.com/Milorph`,`_blank`):e(`/${t}`)}})]})}function ym(){let e=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Bt,{location:e,children:[(0,Z.jsx)(Rt,{path:`/`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(vm,{})})}),(0,Z.jsx)(Rt,{path:`/about`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(lm,{})})}),(0,Z.jsx)(Rt,{path:`/resume`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(Np,{src:Tp})})}),(0,Z.jsx)(Rt,{path:`/socials`,element:(0,Z.jsx)(Bp,{variant:`socials`,children:(0,Z.jsx)($p,{})})}),(0,Z.jsx)(Rt,{path:`/journey`,element:(0,Z.jsx)(Bp,{variant:`resume`,children:(0,Z.jsx)(dm,{src:Ep})})}),(0,Z.jsx)(Rt,{path:`/talk`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(gm,{src:wp})})})]},e.pathname)})}function bm(){return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(_m,{}),(0,Z.jsx)(ym,{})]})}(0,Yn.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(w.StrictMode,{children:(0,Z.jsx)(On,{children:(0,Z.jsx)(bm,{})})}));
+      `}),(0,Z.jsx)(`audio`,{ref:e,src:Dp,loop:!0}),(0,Z.jsxs)(`button`,{className:`bgm-toggle`,onClick:()=>{let r=e.current;t?(r.pause(),n(!1)):r.play().then(()=>n(!0)).catch(()=>{})},children:[`SOUND `,(0,Z.jsx)(`span`,{className:`bgm-state`,children:t?`ON`:`OFF`})]})]})}function vm(){let e=pt();return(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Cp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(Ap,{onNavigate:t=>{t===`github`?window.open(`https://github.com/Milorph`,`_blank`):e(`/${t}`)}})]})}function ym(){let e=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Bt,{location:e,children:[(0,Z.jsx)(Rt,{path:`/`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(vm,{})})}),(0,Z.jsx)(Rt,{path:`/about`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(lm,{})})}),(0,Z.jsx)(Rt,{path:`/resume`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(Np,{src:Tp})})}),(0,Z.jsx)(Rt,{path:`/socials`,element:(0,Z.jsx)(Bp,{variant:`socials`,children:(0,Z.jsx)($p,{})})}),(0,Z.jsx)(Rt,{path:`/journey`,element:(0,Z.jsx)(Bp,{variant:`resume`,children:(0,Z.jsx)(dm,{src:Ep})})}),(0,Z.jsx)(Rt,{path:`/talk`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(gm,{src:wp})})})]},e.pathname)})}function bm(){return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(_m,{}),(0,Z.jsx)(ym,{})]})}var xm=1920,Sm=1080;function Cm({children:e}){return(0,w.useEffect)(()=>{let e=document.getElementById(`stage`),t=()=>{let t=Math.min(window.innerWidth/xm,window.innerHeight/Sm);e&&e.style.setProperty(`--stage-scale`,t)};return t(),window.addEventListener(`resize`,t),window.addEventListener(`orientationchange`,t),()=>{window.removeEventListener(`resize`,t),window.removeEventListener(`orientationchange`,t)}},[]),(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(`div`,{id:`stage`,children:e}),(0,Z.jsx)(`div`,{className:`rotate-hint`,role:`alert`,children:(0,Z.jsxs)(`div`,{className:`rotate-hint-inner`,children:[(0,Z.jsx)(`div`,{className:`rotate-icon`,children:`⟳`}),(0,Z.jsx)(`div`,{className:`rotate-title`,children:`Rotate Your Device`}),(0,Z.jsx)(`div`,{className:`rotate-sub`,children:`This palace is best infiltrated in landscape. Turn your phone sideways to continue.`})]})})]})}(0,Yn.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(w.StrictMode,{children:(0,Z.jsx)(Cm,{children:(0,Z.jsx)(On,{children:(0,Z.jsx)(bm,{})})})}));

@@ -27,7 +27,11 @@ export default function P3Menu({ onNavigate }) {
   };
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 1000);
+    // Start the stagger almost immediately — just long enough for the items to
+    // paint at opacity 0 first so the CSS transition actually runs. Uses a tiny
+    // timeout (not rAF, which browsers throttle in background tabs) so the menu
+    // appears reliably without the old 1s wait that left the page looking empty.
+    const t = setTimeout(() => setMounted(true), 40);
     return () => clearTimeout(t);
   }, []);
 

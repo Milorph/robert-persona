@@ -1,6 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
+
+// true only for the very first page render (initial load / refresh), so the
+// landing page appears with no transition until the visitor actually navigates
+let firstAppRender = true;
 
 const HALFTONE = "radial-gradient(circle, rgba(255,255,255,0.16) 1.6px, transparent 2px)";
 const STAR =
@@ -192,6 +196,17 @@ export default function PageTransition({ children }) {
   const active = TABS[path] ? path : TABS[lastPath] ? lastPath : null;
   const config = (active && TABS[active]) || FALLBACK;
 
+  // Each route mounts its own PageTransition, so we can't rely on
+  // AnimatePresence's `initial` to tell first load from navigation. Instead a
+  // module-level flag is consumed once: the very first mount (initial load or
+  // refresh) skips the overlay and shows the page instantly; every navigation
+  // afterwards plays the transition normally.
+  const [isFirst] = useState(() => {
+    const wasFirst = firstAppRender;
+    firstAppRender = false;
+    return wasFirst;
+  });
+
   useEffect(() => {
     lastPath = path;
   }, [path]);
@@ -199,10 +214,13 @@ export default function PageTransition({ children }) {
   return (
     <AnimatePresence mode="wait">
       <motion.div key={path} style={{ position: "relative" }}>
-        <TransitionOverlay config={config} />
+        {!isFirst && <TransitionOverlay config={config} />}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.3, delay: 0.6 } }}
+          initial={isFirst ? false : { opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: isFirst ? { duration: 0 } : { duration: 0.3, delay: 0.6 },
+          }}
           exit={{ opacity: 0, transition: { duration: 0.15 } }}
         >
           {children}

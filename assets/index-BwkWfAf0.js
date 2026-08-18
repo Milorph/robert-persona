@@ -34,7 +34,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 22px;
+          gap: 36px;
           pointer-events: all;
         }
 

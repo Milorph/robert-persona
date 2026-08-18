@@ -187,12 +187,12 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         /* ===== MOBILE ===== */
         @media (max-width: 820px) {
           .p3-overlay { align-items: center; justify-content: center; }
-          .p3-menu { transform: scale(0.74); transform-origin: center; gap: 18px; padding: 24px; }
+          .p3-menu { transform: scale(0.78); transform-origin: center; gap: 46px; padding: 24px; }
           .p3-name-tag { font-size: 46px; top: 10px; left: 14px; }
           .p3-hint { display: none; }
         }
         @media (max-width: 460px) {
-          .p3-menu { transform: scale(0.58); }
+          .p3-menu { transform: scale(0.62); gap: 52px; }
           .p3-name-tag { font-size: 34px; }
         }
       `}),(0,Z.jsxs)(`div`,{className:`p3-overlay`,children:[(0,Z.jsxs)(`div`,{className:`p3-name-tag`,children:[(0,Z.jsx)(`span`,{children:`Robert's`}),(0,Z.jsx)(`span`,{children:`Persona`})]}),(0,Z.jsx)(`nav`,{className:`p3-menu`,children:Op.map((n,i)=>{let o=t===i,c=Math.abs(i-t),l=o?1:Math.max(.5,1-c*.2),u=n.label.length*n.fontSize*.6+80,d=n.fontSize*.94,f=kp[i]??kp[0];return(0,Z.jsxs)(`a`,{href:`#`,className:`p3-row ${o?`active`:``} ${r?`mounted`:``}`,style:{marginRight:n.offsetX,marginTop:n.offsetY,transitionDelay:r?`${i*80}ms`:`0ms`},onClick:t=>{t.preventDefault(),e?.(n.page)},onMouseMove:()=>{t!==i&&s(i)},"aria-current":o?`page`:void 0,children:[(0,Z.jsx)(`div`,{className:`p3-glow`}),(0,Z.jsxs)(`div`,{className:`p3-skew-wrap`,style:{transform:`skewX(${n.skew}deg) skewY(${n.skewY}deg)`},children:[(0,Z.jsx)(`div`,{className:`p3-shadow-tri${o?` pop`:``}`,style:{width:u,height:d,clipPath:f(u,d)}},o?`pop-${i}-${a}`:`idle-${i}`),(0,Z.jsx)(`div`,{className:`p3-highlight`,style:{width:u,height:d,clipPath:f(u,d),transform:`translateY(-50%) scaleX(${o?1:0})`}}),(0,Z.jsxs)(`div`,{className:`p3-label-wrap`,style:{opacity:l},children:[(0,Z.jsx)(`span`,{className:`p3-label-base p3-label-dark`,style:{fontSize:n.fontSize},children:n.label}),(0,Z.jsx)(`span`,{className:`p3-label-base p3-label-bright`,style:{fontSize:n.fontSize,clipPath:f(u,d)},children:n.label})]})]})]},n.id)})}),(0,Z.jsxs)(`div`,{className:`p3-hint ${r?`mounted`:``}`,children:[(0,Z.jsxs)(`div`,{className:`p3-hint-row`,children:[(0,Z.jsx)(`span`,{className:`p3-hint-key`,children:`↑↓`}),(0,Z.jsx)(`span`,{children:`NAVIGATE`})]}),(0,Z.jsxs)(`div`,{className:`p3-hint-row`,children:[(0,Z.jsx)(`span`,{className:`p3-hint-key`,children:`↵`}),(0,Z.jsx)(`span`,{children:`CONFIRM`})]})]})]})]})}var jp=[{id:`i`,badge:`I`,title:`EDUCATION`,subtitle:`UVic / Seattle University`,rank:4},{id:`ii`,badge:`II`,title:`SKILLS`,subtitle:`ML / Data Science / Full-Stack`,rank:5},{id:`iii`,badge:`III`,title:`PROJECTS`,subtitle:`Featured Work`,rank:5},{id:`iv`,badge:`IV`,title:`EXPERIENCE`,subtitle:`Bombardier / Amazon / Bilimetrix`,rank:4}],Mp=[{index:`01`,title:`EDUCATION LOG`,progress:`2/2`,rows:[{index:`01`,title:`MEng Applied Data Science @ UVic`,status:`GPA 8.32/9`},{index:`02`,title:`BSc Computer Science @ Seattle U`,status:`GPA 3.61/4`},{index:`03`,title:`Led Labs For 200+ Students`,status:`Cleared`},{index:`04`,title:`Python / C++ / MATLAB Teaching`,status:`Cleared`}],bullets:[`- Master of Engineering in Applied Data Science, University of Victoria.`,`- Bachelor of Science in Computer Science, Seattle University, class of 2024.`,`- Teaching Assistant for ECE & CSC courses: coding, debugging, circuit design.`]},{index:`02`,title:`SKILL TREE`,progress:`MAX`,rows:[{index:`01`,title:`ML: PyTorch / HuggingFace / Sklearn`,status:`Main Quest!`},{index:`02`,title:`Data: NumPy / Pandas / LightGBM`,status:`Rank 5`},{index:`03`,title:`Languages: Py / C++ / Java / C# / TS`,status:`Rank 5`},{index:`04`,title:`Backend: Node / ASP.NET / AWS`,status:`Rank 4`}],bullets:[`- Machine learning is the main quest! Aiming for data scientist and SWE roles.`,`- Fine-tuned cross-encoders, built RAG pipelines, shipped clinical ML validation.`,`- Full-stack side quests: React.js, Node.js, MySQL, MongoDB, Docker, CI/CD.`]},{index:`03`,title:`PROJECT ARCHIVE`,progress:`30+`,rows:[{index:`01`,title:`RAG Fact-Verification Pipeline`,status:`89.1% FEVER`},{index:`02`,title:`PM-LSH Neighbor Search`,status:`0.78 Recall`},{index:`03`,title:`Cancer Classifier Neural Net`,status:`97% Acc`},{index:`04`,title:`Facial Attendance Platform`,status:`Shipped`}],bullets:[`- 4-stage RAG pipeline: DeBERTa-v3 + MiniLM cross-encoders on MNLI/ANLI/FEVER.`,`- PM-LSH approximate nearest neighbor search reimplemented from research.`,`- Full archive on GitHub. Hit GITHUB LINK on the main menu!`]},{index:`04`,title:`QUEST HISTORY`,progress:`4`,rows:[{index:`01`,title:`Bombardier: MDO Tools Dev`,status:`Active!`},{index:`02`,title:`UVic: Teaching Assistant`,status:`Cleared`},{index:`03`,title:`Bilimetrix: SWE Intern`,status:`Cleared`},{index:`04`,title:`Amazon: SWE Intern`,status:`Cleared`}],bullets:[`- Now: MDO tooling for next-gen aircraft, Advanced Design @ Bombardier, Canada.`,`- Amazon: self-service tool cutting Alexa onboarding from days to minutes.`,`- Bilimetrix: clinical ML validation pipelines hitting 96% accuracy targets.`]}];function Np({src:e}){let t=pt(),[n,r]=(0,w.useState)(1),[i,a]=(0,w.useState)(!1);return(0,w.useEffect)(()=>{let e=setTimeout(()=>a(!0),80);return()=>clearTimeout(e)},[]),(0,w.useEffect)(()=>{let e=e=>{e.key===`ArrowUp`&&r(e=>Math.max(0,e-1)),e.key===`ArrowDown`&&r(e=>Math.min(jp.length-1,e+1)),e.key===`ArrowLeft`&&t(-1),(e.key===`Escape`||e.key===`Backspace`)&&t(-1)};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[t]),(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:e,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(`div`,{className:`resume-entry-mask`,"aria-hidden":`true`,children:(0,Z.jsx)(`video`,{className:`resume-entry-video`,src:e,autoPlay:!0,loop:!0,muted:!0,playsInline:!0})}),(0,Z.jsx)(`style`,{children:`
@@ -2082,4 +2082,72 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .bgm-toggle .bgm-state { color: #8df6ff; }
         .bgm-toggle:hover .bgm-state { color: #06133b; }
-      `}),(0,Z.jsx)(`audio`,{ref:e,src:Dp,loop:!0}),(0,Z.jsxs)(`button`,{className:`bgm-toggle`,onClick:()=>{let r=e.current;t?(r.pause(),n(!1)):r.play().then(()=>n(!0)).catch(()=>{})},children:[`SOUND `,(0,Z.jsx)(`span`,{className:`bgm-state`,children:t?`ON`:`OFF`})]})]})}function vm(){let e=pt();return(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Cp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(Ap,{onNavigate:t=>{t===`github`?window.open(`https://github.com/Milorph`,`_blank`):e(`/${t}`)}})]})}function ym(){let e=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Bt,{location:e,children:[(0,Z.jsx)(Rt,{path:`/`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(vm,{})})}),(0,Z.jsx)(Rt,{path:`/about`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(lm,{})})}),(0,Z.jsx)(Rt,{path:`/resume`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(Np,{src:Tp})})}),(0,Z.jsx)(Rt,{path:`/socials`,element:(0,Z.jsx)(Bp,{variant:`socials`,children:(0,Z.jsx)($p,{})})}),(0,Z.jsx)(Rt,{path:`/journey`,element:(0,Z.jsx)(Bp,{variant:`resume`,children:(0,Z.jsx)(dm,{src:Ep})})}),(0,Z.jsx)(Rt,{path:`/talk`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(gm,{src:wp})})})]},e.pathname)})}function bm(){return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(_m,{}),(0,Z.jsx)(ym,{})]})}(0,Yn.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(w.StrictMode,{children:(0,Z.jsx)(On,{children:(0,Z.jsx)(bm,{})})}));
+      `}),(0,Z.jsx)(`audio`,{ref:e,src:Dp,loop:!0}),(0,Z.jsxs)(`button`,{className:`bgm-toggle`,onClick:()=>{let r=e.current;t?(r.pause(),n(!1)):r.play().then(()=>n(!0)).catch(()=>{})},children:[`SOUND `,(0,Z.jsx)(`span`,{className:`bgm-state`,children:t?`ON`:`OFF`})]})]})}function vm(){let e=pt();return(0,Z.jsxs)(`div`,{id:`menu-screen`,children:[(0,Z.jsx)(`video`,{src:Cp,autoPlay:!0,loop:!0,muted:!0,playsInline:!0}),(0,Z.jsx)(Ap,{onNavigate:t=>{t===`github`?window.open(`https://github.com/Milorph`,`_blank`):e(`/${t}`)}})]})}function ym(){let e=ut();return(0,Z.jsx)(Ed,{mode:`wait`,children:(0,Z.jsxs)(Bt,{location:e,children:[(0,Z.jsx)(Rt,{path:`/`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(vm,{})})}),(0,Z.jsx)(Rt,{path:`/about`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(lm,{})})}),(0,Z.jsx)(Rt,{path:`/resume`,element:(0,Z.jsx)(Bp,{children:(0,Z.jsx)(Np,{src:Tp})})}),(0,Z.jsx)(Rt,{path:`/socials`,element:(0,Z.jsx)(Bp,{variant:`socials`,children:(0,Z.jsx)($p,{})})}),(0,Z.jsx)(Rt,{path:`/journey`,element:(0,Z.jsx)(Bp,{variant:`resume`,children:(0,Z.jsx)(dm,{src:Ep})})}),(0,Z.jsx)(Rt,{path:`/talk`,element:(0,Z.jsx)(Bp,{variant:`about`,children:(0,Z.jsx)(gm,{src:wp})})})]},e.pathname)})}var bm=[{path:`/`,label:`Home`},{path:`/about`,label:`About Me`},{path:`/resume`,label:`Resume`},{path:`github`,label:`GitHub`},{path:`/socials`,label:`Socials`},{path:`/journey`,label:`My Journey`},{path:`/talk`,label:`Talk To Me`}];function xm(){let e=pt(),t=ut(),[n,r]=(0,w.useState)(!1);if((0,w.useEffect)(()=>{r(!1)},[t.pathname]),t.pathname===`/`)return null;let i=t=>{r(!1),t===`github`?window.open(`https://github.com/Milorph`,`_blank`):e(t)};return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(`style`,{children:`
+        .mnav-burger { display: none; }
+        @media (max-width: 820px) {
+          .mnav-burger {
+            display: flex;
+            position: fixed;
+            top: 12px; right: 12px;
+            z-index: 500;
+            width: 46px; height: 46px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background: rgba(6, 12, 34, 0.82);
+            border: 1px solid rgba(140, 239, 255, 0.5);
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 16px rgba(0, 168, 255, 0.3);
+          }
+          .mnav-burger span {
+            display: block;
+            width: 22px; height: 3px;
+            background: #8df6ff;
+            border-radius: 2px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+          }
+          .mnav-burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+          .mnav-burger.open span:nth-child(2) { opacity: 0; }
+          .mnav-burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+          .mnav-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 499;
+            background: rgba(2, 8, 24, 0.92);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: mnav-fade 0.2s ease;
+          }
+          @keyframes mnav-fade { from { opacity: 0; } to { opacity: 1; } }
+          .mnav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 82%;
+            max-width: 340px;
+          }
+          .mnav-item {
+            font-family: 'Anton', sans-serif;
+            font-style: italic;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #cfeeff;
+            background: rgba(10, 22, 68, 0.9);
+            border: 0;
+            border-left: 5px solid #8df6ff;
+            text-align: left;
+            padding: 14px 20px;
+            cursor: pointer;
+            transform: skewX(-8deg);
+            clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+            transition: background 0.15s ease, color 0.15s ease;
+          }
+          .mnav-item:active { background: #8df6ff; color: #06133b; }
+        }
+      `}),(0,Z.jsxs)(`button`,{className:`mnav-burger${n?` open`:``}`,onClick:()=>r(e=>!e),"aria-label":n?`Close menu`:`Open menu`,children:[(0,Z.jsx)(`span`,{}),(0,Z.jsx)(`span`,{}),(0,Z.jsx)(`span`,{})]}),n&&(0,Z.jsx)(`div`,{className:`mnav-overlay`,onClick:()=>r(!1),children:(0,Z.jsx)(`nav`,{className:`mnav-list`,onClick:e=>e.stopPropagation(),children:bm.map(e=>(0,Z.jsx)(`button`,{className:`mnav-item`,onClick:()=>i(e.path),children:e.label},e.path))})})]})}function Sm(){return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(_m,{}),(0,Z.jsx)(xm,{}),(0,Z.jsx)(ym,{})]})}(0,Yn.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(w.StrictMode,{children:(0,Z.jsx)(On,{children:(0,Z.jsx)(Sm,{})})}));

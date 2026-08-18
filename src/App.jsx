@@ -134,8 +134,8 @@ const NAV_ITEMS = [
   { path: "/resume", label: "Resume" },
   { path: "github", label: "GitHub" },
   { path: "/socials", label: "Socials" },
-  { path: "/journey", label: "My Journey" },
-  { path: "/talk", label: "Talk To Me" },
+  { path: "/journey", label: "Journey" },
+  { path: "/talk", label: "Ask" },
 ]
 
 function MobileNav() {

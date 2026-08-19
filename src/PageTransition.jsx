@@ -105,8 +105,8 @@ function DropTransition({ color, star }) {
           width: "150vw",
           height: "160vh",
           background: color,
-          backgroundImage:
-            "repeating-linear-gradient(115deg, rgba(255,255,255,0.2) 0 3px, transparent 3px 24px)",
+          backgroundImage: HALFTONE,
+          backgroundSize: "14px 14px",
           clipPath: "polygon(0 14%, 100% 0, 100% 86%, 0 100%)",
           zIndex: 999,
           pointerEvents: "none",

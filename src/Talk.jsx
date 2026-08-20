@@ -1,21 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import spriteNeutral from "./assets/aki_neutral.png";
-import spriteHappy from "./assets/aki_happy.png";
-import spriteExcited from "./assets/aki_excited.png";
-import spriteProud from "./assets/aki_proud.png";
-import spriteThink from "./assets/aki_think.png";
-import spriteDetermined from "./assets/aki_determined.png";
-import spriteGrimace from "./assets/aki_grimace.png";
+import talkNeutral from "./assets/talk_neutral.webp";
+import talkHappy from "./assets/talk_happy.webp";
+import talkExcited from "./assets/talk_excited.webp";
+import talkProud from "./assets/talk_proud.webp";
+import talkThink from "./assets/talk_think.webp";
+import talkDetermined from "./assets/talk_determined.webp";
+import talkGrimace from "./assets/talk_grimace.webp";
 
+// one distinct P5 portrait expression per emotion — the face genuinely
+// changes when a different question is asked
 const SPRITES = {
-  neutral: spriteNeutral,
-  happy: spriteHappy,
-  excited: spriteExcited,
-  proud: spriteProud,
-  think: spriteThink,
-  determined: spriteDetermined,
-  grimace: spriteGrimace,
+  neutral: talkNeutral,
+  happy: talkHappy,
+  excited: talkExcited,
+  proud: talkProud,
+  think: talkThink,
+  determined: talkDetermined,
+  grimace: talkGrimace,
 };
 
 const GREETING = {
@@ -76,7 +78,9 @@ export default function Talk({ src }) {
   const timer = useRef(null);
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 80);
+    // hold the stagger until the page transition has cleared the overlay, so
+    // the questions visibly stagger in instead of settling while still hidden
+    const t = setTimeout(() => setMounted(true), 900);
     return () => clearTimeout(t);
   }, []);
 
@@ -134,13 +138,13 @@ export default function Talk({ src }) {
         .tk-tag.mounted { opacity: 1; }
         .tk-tag span { color: #8df6ff; }
 
-        /* ---- sprite ---- */
+        /* ---- portrait ---- */
         .tk-sprite-wrap {
           position: absolute;
-          right: 7vw;
+          right: 3vw;
           bottom: 0;
-          height: 66vh;
-          width: 32vw;
+          height: 74vh;
+          width: 40vw;
           display: flex;
           align-items: flex-end;
           justify-content: center;
@@ -152,26 +156,20 @@ export default function Talk({ src }) {
         }
         .tk-sprite-wrap.mounted { opacity: 1; transform: translateX(0); }
         .tk-sprite {
-          max-height: 100%;
+          height: 100%;
+          width: auto;
           max-width: 100%;
-          filter: drop-shadow(0 0 34px rgba(80, 170, 255, 0.4)) drop-shadow(0 6px 14px rgba(0,0,0,0.5));
-          transition: opacity 0.12s ease;
+          object-fit: contain;
+          filter: drop-shadow(0 10px 22px rgba(0,0,0,0.6));
+          /* the whole portrait is re-keyed per question, so this entrance plays
+             once each time the expression swaps — a snappy pop, not a loop */
+          animation: tk-swap 0.34s cubic-bezier(0.34,1.56,0.64,1);
         }
-        .tk-sprite-wrap.neutral .tk-sprite    { animation: tk-bob 4s ease-in-out infinite; }
-        .tk-sprite-wrap.happy .tk-sprite      { animation: tk-sway 2.2s ease-in-out infinite; }
-        .tk-sprite-wrap.excited .tk-sprite    { animation: tk-hop 0.55s cubic-bezier(0.34,1.56,0.64,1) 2; }
-        .tk-sprite-wrap.proud .tk-sprite      { animation: tk-proud 0.9s cubic-bezier(0.22,1,0.36,1) 1 forwards; }
-        .tk-sprite-wrap.think .tk-sprite      { animation: tk-think 3s ease-in-out infinite; }
-        .tk-sprite-wrap.determined .tk-sprite { animation: tk-stomp 0.5s cubic-bezier(0.34,1.56,0.64,1) 1 forwards; }
-        .tk-sprite-wrap.grimace .tk-sprite    { animation: tk-wobble 0.7s ease-in-out 2; }
-        @keyframes tk-stomp  { 0% { transform: translateY(-20px) scale(1.04); } 60% { transform: translateY(4px) scale(0.99); } 100% { transform: translateY(0) scale(1.02); } }
-        @keyframes tk-wobble { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-2.4deg); } 75% { transform: rotate(2.4deg); } }
-
-        @keyframes tk-bob   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        @keyframes tk-sway  { 0%,100% { transform: rotate(-1.4deg) translateY(0); } 50% { transform: rotate(1.4deg) translateY(-8px); } }
-        @keyframes tk-hop   { 0%,100% { transform: translateY(0); } 40% { transform: translateY(-34px) scale(1.02); } }
-        @keyframes tk-proud { 0% { transform: scale(1); } 45% { transform: scale(1.07) translateY(-12px); } 100% { transform: scale(1.03) translateY(-6px); } }
-        @keyframes tk-think { 0%,100% { transform: rotate(1.6deg) translateY(2px); } 50% { transform: rotate(0.4deg) translateY(6px); } }
+        @keyframes tk-swap {
+          0%   { opacity: 0.25; transform: scale(0.92) translateY(10px); }
+          60%  { opacity: 1; transform: scale(1.035) translateY(-4px); }
+          100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
 
         /* ---- emotion balloon ---- */
         .tk-balloon {
@@ -353,7 +351,7 @@ export default function Talk({ src }) {
             transform: none !important;
             order: 1;
           }
-          .tk-sprite { max-height: 30vh; max-width: 100%; }
+          .tk-sprite { height: auto; max-height: 30vh; max-width: 100%; }
           .tk-balloon { top: 11vh; right: 8vw; width: 58px; height: 58px; }
           .tk-questions {
             position: static;
@@ -393,7 +391,7 @@ export default function Talk({ src }) {
         </div>
 
         <div className={`tk-sprite-wrap ${current.emotion}${mounted ? " mounted" : ""}`} key={`sprite-${pulse}`}>
-          <img className="tk-sprite" src={SPRITES[current.emotion] ?? spriteNeutral} alt="" />
+          <img className="tk-sprite" src={SPRITES[current.emotion] ?? talkNeutral} alt="" />
         </div>
 
         {balloon && (

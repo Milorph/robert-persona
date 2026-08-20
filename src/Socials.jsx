@@ -69,7 +69,7 @@ export default function Socials() {
   const [mounted, setMounted]             = useState(false);
   const [activeInfoBar, setActiveInfoBar] = useState(0);
   const [page, setPage]                   = useState(0);
-  const [focus, setFocus]                 = useState("left"); // "left" | "right"
+  const [opened, setOpened]               = useState(false); // right panel stays hidden until a bar is chosen
   const navigate = useNavigate();
 
   const pageCount = Math.max(1, Math.ceil(ITEMS[active].links.length / PAGE_SIZE));
@@ -77,7 +77,9 @@ export default function Socials() {
   const visibleCounts = ITEMS[active].counts.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 60);
+    // hold the stagger until the page transition has cleared the overlay, so
+    // the tags visibly stagger in instead of settling while still hidden
+    const t = setTimeout(() => setMounted(true), 900);
     return () => clearTimeout(t);
   }, []);
 
@@ -88,25 +90,27 @@ export default function Socials() {
 
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === "q" || e.key === "Q") { if (pageCount > 1) prevPage(); return; }
-      if (e.key === "e" || e.key === "E") { if (pageCount > 1) nextPage(); return; }
-      if (focus === "left") {
+      if (!opened) {
+        // list view: pick a social, then open its right-side panel
         if (e.key === "ArrowUp")    setActive(i => Math.max(0, i - 1));
         if (e.key === "ArrowDown")  setActive(i => Math.min(ITEMS.length - 1, i + 1));
-        if (e.key === "ArrowRight") { setFocus("right"); setActiveInfoBar(0); }
-        if (e.key === "Enter")      window.open(ITEMS[active].href, "_blank");
-      } else {
-        const barCount = visibleLinks.length;
-        if (e.key === "ArrowUp")   setActiveInfoBar(i => Math.max(0, i - 1));
-        if (e.key === "ArrowDown") setActiveInfoBar(i => Math.min(barCount - 1, i + 1));
-        if (e.key === "ArrowLeft") setFocus("left");
-        if (e.key === "Enter")     window.open("https://" + visibleLinks[activeInfoBar], "_blank");
+        if (e.key === "Enter" || e.key === "ArrowRight") { setOpened(true); setActiveInfoBar(0); }
+        if (e.key === "ArrowLeft" || e.key === "Escape" || e.key === "Backspace") navigate(-1);
+        return;
       }
-      if ((e.key === "ArrowLeft" && focus === "left") || e.key === "Escape" || e.key === "Backspace") navigate(-1);
+      // opened: left/right scroll through the pages of links, up/down pick one
+      if (e.key === "ArrowLeft")  { if (pageCount > 1) prevPage(); return; }
+      if (e.key === "ArrowRight") { if (pageCount > 1) nextPage(); return; }
+      if (e.key === "q" || e.key === "Q") { if (pageCount > 1) prevPage(); return; }
+      if (e.key === "e" || e.key === "E") { if (pageCount > 1) nextPage(); return; }
+      if (e.key === "ArrowUp")   setActiveInfoBar(i => Math.max(0, i - 1));
+      if (e.key === "ArrowDown") setActiveInfoBar(i => Math.min(visibleLinks.length - 1, i + 1));
+      if (e.key === "Enter")     window.open("https://" + visibleLinks[activeInfoBar], "_blank");
+      if (e.key === "Escape" || e.key === "Backspace") setOpened(false);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [active, navigate, focus, page, pageCount, visibleLinks, activeInfoBar]);
+  }, [active, navigate, opened, page, pageCount, visibleLinks, activeInfoBar]);
 
   return (
     <div id="menu-screen">
@@ -610,7 +614,7 @@ export default function Socials() {
           <div
             key={item.id}
             className={`sc-bar-outer${active === i ? " active" : ""}${mounted ? " mounted" : ""}`}
-            onClick={() => window.open(item.href, "_blank")}
+            onClick={() => { setActive(i); setOpened(true); setActiveInfoBar(0); }}
             onMouseMove={() => setActive(i)}
           >
             <div className="sc-bar-red" />
@@ -646,7 +650,7 @@ export default function Socials() {
         ))}
       </div>
 
-      {mounted && (
+      {opened && (
         <div className="sc-right-nav" key={active}>
           <span className="sc-nav-arrow left">◄</span>
           <span
@@ -664,7 +668,7 @@ export default function Socials() {
         </div>
       )}
 
-      {mounted && visibleLinks.map((link, i) => (
+      {opened && visibleLinks.map((link, i) => (
         <div
           className={`sc-info-bar-wrap${activeInfoBar === i ? " selected" : ""}`}
           key={`bar-${active}-${page}-${i}`}
@@ -690,10 +694,20 @@ export default function Socials() {
       ))}
 
       <div className={`sc-footer${mounted ? " mounted" : ""}`}>
-        <div className="sc-footer-row"><span className="sc-footer-key">↑↓</span><span>SELECT</span></div>
-        <div className="sc-footer-row"><span className="sc-footer-key">Q/E</span><span>PAGE</span></div>
-        <div className="sc-footer-row"><span className="sc-footer-key">↵</span><span>OPEN</span></div>
-        <div className="sc-footer-row"><span className="sc-footer-key">ESC</span><span>BACK</span></div>
+        {opened ? (
+          <>
+            <div className="sc-footer-row"><span className="sc-footer-key">↑↓</span><span>SELECT</span></div>
+            <div className="sc-footer-row"><span className="sc-footer-key">←→</span><span>PAGE</span></div>
+            <div className="sc-footer-row"><span className="sc-footer-key">↵</span><span>OPEN</span></div>
+            <div className="sc-footer-row"><span className="sc-footer-key">ESC</span><span>CLOSE</span></div>
+          </>
+        ) : (
+          <>
+            <div className="sc-footer-row"><span className="sc-footer-key">↑↓</span><span>SELECT</span></div>
+            <div className="sc-footer-row"><span className="sc-footer-key">↵</span><span>OPEN</span></div>
+            <div className="sc-footer-row"><span className="sc-footer-key">ESC</span><span>BACK</span></div>
+          </>
+        )}
       </div>
     </div>
   );

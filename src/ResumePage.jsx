@@ -80,23 +80,32 @@ export default function ResumePage({ src }) {
   const navigate = useNavigate();
   const [active, setActive] = useState(1);
   const [mounted, setMounted] = useState(false);
+  const [opened, setOpened] = useState(false); // detail panel hidden until a card is chosen
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 80);
+    // hold the stagger until the page transition has cleared the overlay, so
+    // the cards visibly stagger in instead of settling while still hidden
+    const t = setTimeout(() => setMounted(true), 900);
     return () => clearTimeout(t);
   }, []);
 
   useEffect(() => {
     const onKey = (e) => {
+      // up/down always move the selection (and refresh the panel while open)
       if (e.key === "ArrowUp") setActive((i) => Math.max(0, i - 1));
       if (e.key === "ArrowDown") setActive((i) => Math.min(ITEMS.length - 1, i + 1));
-      if (e.key === "ArrowLeft") navigate(-1);
-      if (e.key === "Escape" || e.key === "Backspace") navigate(-1);
+      if (!opened) {
+        if (e.key === "Enter" || e.key === "ArrowRight") setOpened(true);
+        if (e.key === "ArrowLeft" || e.key === "Escape" || e.key === "Backspace") navigate(-1);
+        return;
+      }
+      // opened: left / esc closes the detail panel back to the list
+      if (e.key === "ArrowLeft" || e.key === "Escape" || e.key === "Backspace") setOpened(false);
     };
 
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [navigate]);
+  }, [navigate, opened]);
 
   return (
     <div id="menu-screen">
@@ -331,6 +340,24 @@ export default function ResumePage({ src }) {
             linear-gradient(180deg, rgba(255,255,255,0.05), transparent 24%);
           pointer-events: none;
         }
+
+        /* right detail panel slides in when a card is opened */
+        @keyframes resume-panel-in {
+          from { opacity: 0; transform: translateX(64px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        .resume-detail-panel {
+          animation: resume-panel-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        /* rows + bullets stagger in behind the panel */
+        @keyframes resume-row-in {
+          from { opacity: 0; transform: translateX(30px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        .resume-detail-row,
+        .resume-detail-bullet {
+          animation: resume-row-in 0.34s ease both;
+        }
         .resume-detail-top {
           position: relative;
           display: grid;
@@ -480,6 +507,7 @@ export default function ResumePage({ src }) {
               }}
               onClick={() => {
                 setActive(index);
+                setOpened(true);
               }}
             >
               <div className="resume-badge">
@@ -501,6 +529,7 @@ export default function ResumePage({ src }) {
           ))}
         </div>
 
+        {opened && (
         <div className="resume-detail-panel" key={active}>
           <div className="resume-detail-top">
             <div className="resume-detail-top-index">{DETAILS[active].index}</div>
@@ -509,8 +538,8 @@ export default function ResumePage({ src }) {
           </div>
 
           <div className="resume-detail-list">
-            {DETAILS[active].rows.map((row) => (
-              <div className="resume-detail-row" key={row.index}>
+            {DETAILS[active].rows.map((row, r) => (
+              <div className="resume-detail-row" key={row.index} style={{ animationDelay: `${120 + r * 70}ms` }}>
                 <div className="resume-detail-row-index">{row.index}</div>
                 <div className="resume-detail-row-title">{row.title}</div>
                 <div className="resume-detail-status">{row.status}</div>
@@ -521,12 +550,13 @@ export default function ResumePage({ src }) {
           <div className="resume-detail-bottom">
             <div className="resume-detail-bottom-title">DETAILS</div>
             <div className="resume-detail-bullets">
-              {DETAILS[active].bullets.map((line) => (
-                <div className="resume-detail-bullet" key={line}>{line}</div>
+              {DETAILS[active].bullets.map((line, b) => (
+                <div className="resume-detail-bullet" key={line} style={{ animationDelay: `${120 + (DETAILS[active].rows.length + b) * 70}ms` }}>{line}</div>
               ))}
             </div>
           </div>
         </div>
+        )}
 
       </div>
     </div>

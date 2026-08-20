@@ -52,7 +52,9 @@ export default function Journey({ src }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 80);
+    // hold the stagger until the page transition has cleared the overlay, so
+    // the cards visibly stagger in instead of settling while still hidden
+    const t = setTimeout(() => setMounted(true), 900);
     return () => clearTimeout(t);
   }, []);
 

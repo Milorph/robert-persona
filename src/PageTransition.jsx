@@ -16,7 +16,7 @@ const SLANT = "polygon(14% 0, 100% 0, 86% 100%, 0 100%)";
 const TABS = {
   "/about":   { color: "#7a1a6e", star: "#ff4fa0", dark: "#3a1140", motion: "slash", dir: "ltr" }, // purple + pink
   "/resume":  { color: "#0038d6", star: "#37c2ff", dark: "#0b1a5c", motion: "slash", dir: "rtl" }, // blue + cyan
-  "/socials": { color: "#cc0a28", star: "#ffffff", dark: "#3d060e", motion: "drop" },              // crimson + white
+  "/socials": { color: "#cc0a28", star: "#c8ccd6", dark: "#3d060e", motion: "drop" },              // crimson + silver
   "/journey": { color: "#0a7a44", star: "#57f0a8", dark: "#083a24", motion: "slash", dir: "ltr" }, // green + mint
   "/talk":    { color: "#1a7bff", star: "#9af0ff", dark: "#0d2a66", motion: "dialogue" },          // azure + ice
 };

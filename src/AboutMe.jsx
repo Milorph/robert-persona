@@ -4,12 +4,13 @@ import char1 from "./assets/char1.png";
 import char2 from "./assets/char2.png";
 import char3 from "./assets/char3.png";
 import bgVideo from "./assets/lavenza.webm";
-import reveal1 from "./assets/reveal1.jpg";
-import reveal2 from "./assets/reveal2.jpg";
-import reveal3 from "./assets/reveal3.png";
+import revealWho from "./assets/char_whoami.webp";
+import revealEdu from "./assets/char_edu.webp";
+import revealHi from "./assets/char_highlights.webp";
 
 const CHARS = [char1, char2, char3];
-const MAIN_IMAGES = [reveal1, reveal2, reveal3];
+// consistent P3 Reload full-body character renders (same art style, one per tab)
+const MAIN_IMAGES = [revealWho, revealEdu, revealHi];
 
 const REVEAL_CONTENT = [
   {
@@ -89,7 +90,9 @@ export default function AboutMe() {
   };
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 60);
+    // hold the stagger until the page transition has cleared the overlay, so
+    // the tags visibly stagger in instead of settling while still hidden
+    const t = setTimeout(() => setMounted(true), 900);
     return () => clearTimeout(t);
   }, []);
 
@@ -254,9 +257,16 @@ export default function AboutMe() {
           right: -4vw;
           z-index: 13;
           pointer-events: none;
-          width: 38vw;
+          width: 40vw;
           height: 100vh;
           overflow: hidden;
+          /* faint translucent backing; the character blends onto the scene
+             below (see mix-blend-mode on the image) so its white art
+             background reads as semi-transparent rather than a solid box */
+          background: linear-gradient(180deg,
+            rgba(20, 8, 30, 0.18) 0%,
+            rgba(74, 8, 26, 0.22) 55%,
+            rgba(20, 8, 30, 0.18) 100%);
           opacity: 0;
           transform: translateX(24px) skewX(-8deg) scale(0.98);
           transition: opacity 0.35s ease, transform 0.35s ease;
@@ -406,11 +416,13 @@ export default function AboutMe() {
         .sc-main-portrait {
           width: 100%;
           height: 100%;
+          /* half-body bust portrait, shown whole and face-forward; transparent
+             areas let the translucent panel behind show through */
           object-fit: contain;
-          object-position: center;
-          transform: skewX(8deg) scale(1);
+          object-position: center center;
+          transform: skewX(8deg) scale(1.08);
           transform-origin: center;
-          filter: drop-shadow(0 0 24px rgba(0, 20, 60, 0.6));
+          filter: drop-shadow(0 0 26px rgba(0, 10, 40, 0.55));
         }
 
         /* ── Each bar ── */
